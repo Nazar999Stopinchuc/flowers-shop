@@ -78,15 +78,20 @@
   max-height: 100%;
   border-radius: $bord-r;
   border: 2px solid transparent;
-  transition: opacity 0.3s, box-shadow 0.3s color 0.3s;
+  transition: opacity 0.3s, box-shadow 0.3s, color 0.3s;
+
+  &__img {
+    max-width: 200px;
+    max-height: 40px;
+  }
 
   &:hover {
     opacity: 0.8;
   }
 
   &:focus {
-    background-color: rgba(255, 255, 255, 0.01);
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.70);
+    background-color: rgba($btn-color, 0.01);
+    box-shadow: 0 0 0 2px rgba($accent-color, 0.01);
   }
 
   &:active {
@@ -134,10 +139,10 @@
   &__link {
     border-radius: $bord-r;
     font-size: 18px;
-  }
 
-  &__link--active {
-    color: $accent-color;
+    &--active {
+      color: $accent-color;
+    }
   }
 
   &__close {
@@ -177,7 +182,7 @@
     top: 0;
     height: 100vh;
     width: 50%;
-    background-color: #FFF;
+    background-color: $btn-color;
     transition: left 0.3s;
 
     &--active {
@@ -233,10 +238,11 @@
 
   &__btn {
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 44px;
     width: 44px;
-    padding: 10px;
     border-radius: $bord-r;
     border: 2px solid transparent;
     @extend %bg;
@@ -248,21 +254,21 @@
     }
 
     &:hover svg {
-      stroke: #FFF;
+      stroke: $btn-color;
     }
 
     &:hover .user-nav__numb {
-      background-color: #FFF;
+      background-color: $btn-color;
       color: $accent-color;
     }
 
     &:focus {
       background-color: rgba(255, 122, 80, 0.10);
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.70);
+      box-shadow: 0 0 0 2px rgba($accent-color, 0.70);
     }
 
     &:active {
-      background-color: #FFF2ED;
+      background-color: $btn-color;
       box-shadow: none;
     }
 
@@ -277,8 +283,7 @@
   }
 
 
-  &__search,
-  &__cart {
+  &__svg {
     height: 20px;
     width: 20px;
     fill: none;
@@ -294,7 +299,7 @@
     padding: 2px 4px;
     line-height: 1;
     font-size: 10px;
-    color: #FFF;
+    color: $btn-color;
     background-color: $accent-color;
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s;
@@ -375,13 +380,8 @@
   &__order {
     padding: 12px 32px;
     margin-right: 34px;
-    border-radius: $bord-r;
-
     font-size: 18px;
     line-height: 1.3;
-
-    color: #FFF;
-    background-color: $accent-color;
   }
 
   &__detailed {
@@ -479,6 +479,8 @@
 
   &__control {
     display: flex;
+    padding: 5px 5px 5px 0;
+    overflow-x: auto;
     margin-bottom: 45px;
     min-width: 100%;
   }
@@ -493,7 +495,7 @@
     line-height: 1.3;
     white-space: nowrap;
     color: $accent-title-color;
-    background-color: #FFF;
+    background-color: $btn-color;
     border-radius: $bord-r;
     box-shadow: 0 0 0 1px #ECECEC;
     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
@@ -513,7 +515,7 @@
 
     &:hover {
       background-color: rgba(255, 122, 80, 0.10);
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.70);
+      box-shadow: 0 0 0 2px rgba($accent-color, 0.70);
       color: $accent-color;
     }
 
@@ -522,11 +524,11 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.70);
+      box-shadow: 0 0 0 2px rgba($accent-color, 0.70);
     }
 
     &:active {
-      background-color: #FFF;
+      background-color: $btn-color;
       box-shadow: 0 -5px 12px 0 rgba(255, 104, 56, 0.20) inset;
       color: $accent-title-color;
     }
@@ -538,11 +540,11 @@
 
   .mixitup-control-active {
     background-color: $accent-color;
-    color: #FFF;
+    color: $btn-color;
   }
 
   .mixitup-control-active svg {
-    fill: #FFF;
+    fill: $btn-color;
   }
 
   &__content {
@@ -576,12 +578,6 @@
   }
 
   @include r(1200) {
-    &__control {
-      overflow: scroll;
-      padding: 5px 5px 5px 0;
-
-    }
-
     &__content {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -628,7 +624,7 @@
 
 }
 
-.produkt-card {
+.product-card {
   padding: 20px 15px 20px;
   display: flex;
   flex-direction: column;
@@ -636,12 +632,17 @@
   min-height: 300px;
   height: 100%;
   box-shadow: 0 0 0 1px #ECECEC;
-  background-color: #FFF;
+  background-color: $btn-color;
   border-radius: $bord-r;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 0 0 1px $accent-color;
+  }
 
   &__img {
-    max-width: 140px;
-    max-height: 140px;
+    width: 140px;
+    height: 140px;
   }
 
   &__name {
@@ -655,7 +656,7 @@
     margin: 7px 0;
     font-size: 15px;
     line-height: 1.4;
-    font-weight: 700;
+    font-weight: 500;
     color: $accent-title-color;
   }
 
@@ -663,9 +664,7 @@
     padding: 7px 16px;
     font-size: 14px;
     line-height: 1.3;
-    color: #FFF;
-    background-color: $accent-color;
-    border-radius: $bord-r;
+
   }
 }
 
@@ -693,6 +692,14 @@
     margin-bottom: 30px;
   }
 
+  &__item {
+    position: relative;
+    display: block;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-left: 65px;
+  }
+
   &__text {
     margin-bottom: 30px;
     @include line-clamp(4)
@@ -702,32 +709,24 @@
     margin-bottom: 30px;
   }
 
-  &__pros-text {
-    position: relative;
-    display: block;
-    font-size: 24px;
-    margin-bottom: 20px;
-    padding-left: 65px;
-  }
-
   &__svg {
     position: absolute;
     left: 0;
     top: 0;
-    width: 34px;
+    width: 44px;
     height: 34px;
-  }
 
-  &__svg--watch {
-    fill: $accent-color;
-  }
+    &--watch {
+      fill: $accent-color;
+    }
 
-  &__svg--rider {
-    fill: #00AAFF;
-  }
+    &--rider {
+      fill: #00AAFF;
+    }
 
-  &__svg--shop {
-    fill: #FF2222;
+    &--shop {
+      fill: #FF2222;
+    }
   }
 
   &__btn {
@@ -735,9 +734,6 @@
     padding: 12px 32px;
     font-size: 18px;
     line-height: 1.3;
-    color: #FFF;
-    background-color: $accent-color;
-    border-radius: $bord-r;
   }
 
   @include r(1200) {
@@ -885,9 +881,9 @@
 
 }
 
-.restaurant-cart {
+.restaurant-card {
   border-radius: 10px;
-  background-color: #FFF;
+  background-color: $btn-color;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.10);
   text-align: left;
   transition: box-shadow 0.3s;
@@ -897,20 +893,24 @@
   }
 
   &__img {
-    margin-bottom: 15px;
     height: 300px;
+    width: 370px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__info {
+    padding: 15px 20px 20px;
   }
 
   &__title {
     font-size: 24px;
     font-weight: 400;
     line-height: 1.3;
-    margin: 0 0 20px 20px;
+    margin-bottom: 20px;
     @include line-clamp(1);
   }
 
   &__inner {
-    padding: 0 20px 20px;
     display: flex;
     justify-content: space-between;
   }
@@ -930,16 +930,16 @@
   }
 
   &__btn {
-    position: relative;
-    width: 80px;
-    height: 33px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 28px;
     background-color: $accent-color;
     border-radius: 20px;
 
     &:hover svg {
       fill: $accent-color;
-      right: 5px;
-      transform: translateX(0);
+      transform: translateX(20px);
     }
 
     &:active svg,
@@ -951,14 +951,10 @@
   }
 
   &__svg-arrow {
-    position: absolute;
-    top: 5px;
-    right: 50%;
-    transform: translateX(50%);
     width: 24px;
     height: 24px;
-    fill: #FFF;
-    transition: right 0.3s, fill 0.3s;
+    fill: $btn-color;
+    transition: transform, fill 0.3s;
   }
 
   @include r(560) {
@@ -968,7 +964,10 @@
 }
 
 .reviews {
-  text-align: center;
+  &__title {
+    margin: 0 auto 50px;
+    width: fit-content;
+  }
 
   &__inner {
     display: flex;
@@ -986,14 +985,13 @@
   }
 
   &__content {
-    text-align: left;
-    max-width: 570px;
-
+    padding: 0 40px;
   }
 
   &__text {
     position: relative;
     font-style: italic;
+    max-width: 570px;
     margin-bottom: 30px;
   }
 
@@ -1016,6 +1014,7 @@
   }
 
   &__user-name {
+    display: inline-block;
     font-weight: 500;
     line-height: 1.3;
     color: $accent-color;
@@ -1138,6 +1137,14 @@
 
   .slick-next::before {
     background-image: url('../images/icon/icon-right.svg');
+  }
+
+  .slick-disabled {
+    border-color: $accent-color;
+
+    &::before {
+      filter: invert(64%) sepia(47%) saturate(5801%) hue-rotate(336deg) brightness(101%) contrast(103%);
+    }
   }
 
   @include r(1200) {
@@ -1303,6 +1310,7 @@
   &__top {
     display: flex;
     align-items: flex-start;
+    gap: 70px;
     margin-bottom: 70px;
   }
 
@@ -1310,16 +1318,14 @@
     margin-bottom: 15px;
   }
 
-  &__form-subscribe {
-    margin-right: 65px;
-  }
-
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
+    gap: 10px 70px;
+  }
 
-    margin-right: 70px;
-    gap: 10px 0;
+  &__item {
+    @include line-clamp(1);
   }
 
   &__link {
@@ -1405,7 +1411,7 @@
     font-size: 14px;
     border-radius: $bord-r;
     border: 1px solid $accent-symbol-color;
-    background-color: #FFF;
+    background-color: $btn-color;
     color: $accent-symbol-color;
     transition: box-shadow 0.3s;
 
@@ -1416,6 +1422,7 @@
 
     &:focus {
       box-shadow: 0 0 0 2px $accent-color;
+      border: none;
     }
 
     &::placeholder {
@@ -1432,9 +1439,7 @@
     font-size: 14px;
     line-height: 1.3;
     @extend %rubik-500;
-    color: #FFF;
-    background-color: $accent-color;
-    border-radius: $bord-r;
+
 
     &svg {
       transition: fill 0.3s;
@@ -1453,7 +1458,7 @@
     left: 37px;
     width: 17px;
     height: 16px;
-    fill: #FFF;
+    fill: $btn-color;
   }
 
   @include r(992) {
@@ -1474,30 +1479,18 @@
     padding: 5px 0 5px 27px;
     border-radius: $bord-r;
     color: $accent-text-color;
+    @include line-clamp(1);
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 7px;
-      height: 18px;
-      width: 20px;
-      @extend %bg;
-    }
-
-    &--adress::before {
-      background-image: url('../images/sprite.svg#icon-location');
-    }
-
-    &--tel::before {
-      background-image: url('../images/icon/icon-call.svg');
-      width: 18px;
-    }
-
-    &--mail::before {
-      background-image: url('../images/sprite.svg#icon-message');
-      width: 22px;
-    }
+  &__svg {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 5px;
+    fill: none;
+    stroke: $accent-text-color;
+    transition: stroke 0.3s;
   }
 
   @include r(992) {
@@ -1544,12 +1537,12 @@
     }
 
     &:hover svg {
-      fill: #FFF;
+      fill: $btn-color;
     }
 
     &:focus {
       background-color: rgba(255, 122, 80, 0.10);
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.70);
+      box-shadow: 0 0 0 2px rgba($accent-color, 0.70);
     }
 
     &:focus svg {

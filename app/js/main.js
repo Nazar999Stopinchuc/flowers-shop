@@ -20,6 +20,7 @@ $(function () {
 
   $('.reviews__slider-wrap').slick({
     dots: true,
+    infinite: false,
     responsive: [
       {
         breakpoint: 768,
@@ -27,9 +28,6 @@ $(function () {
       }
     ]
   });
-
-  var mixer = mixitup('.popular-categories__content');
-  mixer.filter('.category-burger');
 
 });
 
@@ -50,5 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+var mixer = mixitup('.popular-categories__content');
+mixer.filter('.category-burger');
 
 
