@@ -91,12 +91,23 @@
 
   &:focus {
     background-color: rgba($btn-color, 0.01);
-    box-shadow: 0 0 0 2px rgba($accent-color, 0.01);
+    box-shadow: 0 0 0 2px rgba($accent-color, 0.70);
   }
 
   &:active {
     opacity: 0.6;
   }
+
+  @include r(768) {
+    width: 115px;
+    height: 23px;
+
+    &__img {
+      max-width: 115px;
+      max-height: 23px;
+    }
+  }
+
 }
 
 .menu {
@@ -108,46 +119,59 @@
   &__logo {
     margin-right: auto;
   }
-
-  @include r(768) {
-    &__logo {
-      max-width: 115px;
-      max-height: 23px;
-    }
-  }
 }
 
-.page-navigation {
-  position: relative;
+.menu-mob {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  left: -200%;
+  top: 0;
+  height: 100vh;
+  width: 50%;
+  overflow-y: auto;
+  background-color: $btn-color;
+  transition: left 0.3s;
+
+  &--active {
+    left: 0;
+  }
 
   &__logo {
-    display: none;
+    margin: 25px 0 25px 25px;
+    display: inline-block;
+    min-width: 200px;
+    min-height: 40px;
   }
 
-  &--menu {
-    margin-right: 63px;
+  .logo__img {
+    min-width: 200px;
+    min-height: 30px;
   }
 
-  &__list {
-    display: flex;
-  }
+  .page-navigation {
+    display: block;
 
-  &__item:not(:last-child) {
-    margin-right: 45px;
-  }
-
-  &__link {
-    border-radius: $bord-r;
-    font-size: 18px;
-
-    &--active {
-      color: $accent-color;
+    &__list {
+      flex-direction: column;
+      padding: 25px 0 25px 25px;
+      margin: 0 0 15px;
+      border-bottom: 1px solid #EEEFF3;
+      border-top: 1px solid #EEEFF3;
     }
+
+    &__item:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  &__contacts {
+    padding-left: 25px;
   }
 
   &__close {
     position: absolute;
-    display: none;
+    display: block;
     height: 44px;
     width: 44px;
     right: 25px;
@@ -175,40 +199,7 @@
   }
 
   @include r(992) {
-
-    z-index: 1;
-    position: absolute;
-    left: -200%;
-    top: 0;
-    height: 100vh;
-    width: 50%;
-    background-color: $btn-color;
-    transition: left 0.3s;
-
-    &--active {
-      left: 0;
-    }
-
-    &__logo {
-      margin-top: 25px;
-      margin-left: 15px;
-      display: inline-block;
-      min-width: 200px;
-      min-height: 40px;
-    }
-
-    &__list {
-      flex-direction: column;
-      grid-area: 20px;
-      margin: 90px 0 15px;
-      padding: 25px 0 25px 15px;
-      border-bottom: 1px solid #EEEFF3;
-      border-top: 1px solid #EEEFF3;
-    }
-
-    &__close {
-      display: block;
-    }
+    display: block;
   }
 
   @include r(768) {
@@ -222,6 +213,37 @@
         width: 25px;
       }
     }
+  }
+}
+
+.page-navigation {
+  &__logo {
+    display: none;
+  }
+
+  &--menu {
+    margin-right: 63px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  &__link {
+    border-radius: $bord-r;
+    font-size: 18px;
+
+    &--active {
+      color: $accent-color;
+    }
+  }
+
+  @include r(992) {
+    display: none;
   }
 }
 
@@ -320,7 +342,7 @@
 
   @include r(992) {
     display: block;
-    margin-left: 15px;
+    margin: 0 7px 0 3px;
   }
 
   @include r(768) {
@@ -696,7 +718,7 @@
     position: relative;
     display: block;
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     padding-left: 65px;
   }
 
@@ -774,11 +796,16 @@
 
     &__text {
       font-size: 16px;
-      margin-bottom: 33px;
+      margin-bottom: 35px;
     }
 
     &__pros {
       margin-bottom: 20px;
+    }
+
+    &__item {
+      font-size: 18px;
+      padding-left: 45px;
     }
 
     &__pros-text {
@@ -819,6 +846,10 @@
     gap: 30px;
   }
 
+  &__slider {
+    display: none;
+  }
+
   @include r(992) {
     &__list {
       gap: 15px;
@@ -829,15 +860,20 @@
     &__list {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    .slick-dots {
+      margin-bottom: 15px;
+    }
   }
 
   @include r(560) {
     &__list {
-      grid-template-columns: repeat(1, 1fr);
+      display: none;
+    }
 
-      // .slick-slide {
-      //   max-width: 345px;
-      // }
+    &__slider {
+      display: block;
+
       .slick-dots {
         display: flex;
         justify-content: center;
@@ -921,6 +957,11 @@
     padding-left: 25px;
   }
 
+  &__time {
+    white-space: nowrap;
+    margin-right: 20px;
+  }
+
   &__svg-timer {
     position: absolute;
     width: 22px;
@@ -958,8 +999,12 @@
   }
 
   @include r(560) {
-    max-width: 345px;
+    max-width: 100%;
     margin: 0 auto;
+
+    &__img {
+      width: 100%;
+    }
   }
 }
 
@@ -1147,12 +1192,6 @@
     }
   }
 
-  @include r(1200) {
-    &__inner {
-      padding: 0 38px;
-    }
-  }
-
   @include r(992) {
     &__inner {
       flex-direction: column;
@@ -1164,8 +1203,15 @@
   }
 
   @include r(768) {
+
+    &__title {
+      margin-bottom: 28px;
+    }
+
     .slick-dots {
-      display: none;
+      button {
+        display: none;
+      }
     }
 
     .slick-arrow {
@@ -1197,7 +1243,7 @@
     &__text {
       font-size: 14px;
       max-width: 265px;
-      margin-bottom: 20px;
+      margin-bottom: 14px;
     }
 
     &__user-name {
@@ -1225,12 +1271,12 @@
     }
 
     .slick-prev {
-      top: 6%;
-      left: 38%;
+      top: 8%;
+      left: 40%;
     }
 
     .slick-next {
-      top: 6%;
+      top: 8%;
       right: 40%;
     }
   }
@@ -1275,7 +1321,7 @@
     }
 
     &__title {
-      margin-bottom: 15px;
+      margin-bottom: 13px;
     }
 
     &__text {
@@ -1312,6 +1358,17 @@
     align-items: flex-start;
     gap: 70px;
     margin-bottom: 70px;
+  }
+
+  &__logo {
+    min-width: 200px;
+    min-height: 40px;
+  }
+
+
+  .logo__img {
+    min-width: 200px;
+    min-height: 30px;
   }
 
   &__logo {
@@ -1375,6 +1432,7 @@
   }
 
   @include r(768) {
+
     &__list {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -1387,10 +1445,15 @@
   @include r(560) {
     &__top {
       flex-direction: column;
+      gap: 35px;
     }
 
     &__list {
       grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__logo {
+      padding: 0;
     }
   }
 }
@@ -1467,8 +1530,6 @@
 }
 
 .contacts {
-  margin-left: -7px;
-
   &__item:not(:last-child) {
     margin-bottom: 15px;
   }
@@ -1500,6 +1561,10 @@
   @include r(768) {
     &__link {
       padding: 13px 0 13px 27px
+    }
+
+    &__svg {
+      top: 15px;
     }
 
     &__link::before {

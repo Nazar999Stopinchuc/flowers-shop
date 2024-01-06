@@ -1,21 +1,11 @@
 $(function () {
 
-  $('.best-restaurants__list').slick({
+  $('.best-restaurants__slider').slick({
     arrows: false,
-    responsive: [
-      {
-        breakpoint: 2048,
-        settings: "unslick"
-      },
-      {
-        breakpoint: 560,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true
-        }
-      },
-    ]
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true
   });
 
   $('.reviews__slider-wrap').slick({
@@ -24,7 +14,7 @@ $(function () {
     responsive: [
       {
         breakpoint: 768,
-        dots: false,
+        dots: false
       }
     ]
   });
@@ -33,18 +23,25 @@ $(function () {
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
-  const burgerClose = document.querySelector('.page-navigation__close');
-  const pageNavigation = document.querySelector('.page-navigation');
+  const burgerClose = document.querySelector('.menu-mob__close');
+  const menuMob = document.querySelector('.menu-mob');
 
   burger.addEventListener('click', () => {
-    pageNavigation.classList.add('page-navigation--active');
+    menuMob.classList.add('menu-mob--active');
     document.body.classList.add('lock');
 
   });
 
   burgerClose.addEventListener('click', () => {
-    pageNavigation.classList.remove('page-navigation--active');
+    menuMob.classList.remove('menu-mob--active');
     document.body.classList.remove('lock');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (e.target !== burger && e.target !== menuMob) {
+      menuMob.classList.remove('menu-mob--active');
+      document.body.classList.remove('lock');
+    }
   });
 
 });

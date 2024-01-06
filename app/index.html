@@ -26,39 +26,51 @@
             <img class="logo__img" src="images/logo.svg" alt="логотип">
           </a>
 
-          <div class="page-navigation">
-
-            <a class="logo page-navigation__logo" href="#">
+          <div class="menu-mob">
+            <a class="logo menu-mob__logo" href="#">
               <img class="logo__img" src="images/logo.svg" alt="логотип">
             </a>
 
-            <ul class="page-navigation__list page-navigation--menu">
-              <li class="page-navigation__item">
-                <a class="page-navigation__link page-navigation__link--active link-animation" href="#">Главная</a>
-              </li>
-              <li class="page-navigation__item">
-                <a class="page-navigation__link link-animation" href="#">Блюда</a>
-              </li>
-              <li class="page-navigation__item">
-                <a class="page-navigation__link link-animation" href="#">Контакты</a>
-              </li>
-            </ul>
+            <div class="page-navigation menu-mob__page-navigation">
+              <ul class="page-navigation__list page-navigation--menu">
+                <li class="page-navigation__item">
+                  <a class="page-navigation__link page-navigation__link--active link-animation" href="#">Главная</a>
+                </li>
+                <li class="page-navigation__item">
+                  <a class="page-navigation__link link-animation" href="#">Блюда</a>
+                </li>
+                <li class="page-navigation__item">
+                  <a class="page-navigation__link link-animation" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
 
-            <address class="contacts header__contacts">
+            <address class="contacts menu-mob__contacts">
               <ul class="contacts__list">
                 <li class="contacts__item ">
-                  <a class="contacts__link contacts__link--adress link-animation" href="#">ул. Т.Г.Шевченко, 1</a>
+                  <a class="contacts__link contacts__link--adress link-animation" href="#">
+                    <svg class="contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-location"></use>
+                    </svg>
+                    ул. Т.Г.Шевченко, 1</a>
                 </li>
                 <li class="contacts__item">
-                  <a class="contacts__link contacts__link--tel link-animation" href="tel:380501112233">380501112233</a>
+                  <a class="contacts__link contacts__link--tel link-animation" href="tel:380501112233">
+                    <svg class="contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-call"></use>
+                    </svg>
+                    380501112233</a>
                 </li>
                 <li class="contacts__item">
-                  <a class="contacts__link contacts__link--mail link-animation"
-                    href="mailto:support@sfood.com">support@sfood.com</a>
+                  <a class="contacts__link contacts__link--mail link-animation" href="mailto:support@sfood.com">
+                    <svg class="contacts__svg">
+                      <use xlink:href="images/sprite.svg#icon-message"></use>
+                    </svg>
+                    support@sfood.com</a>
                 </li>
               </ul>
 
-              <ul class="social-contacts">
+              <ul class="social-contacts menu-mob__social-contacts">
                 <li class="social-contacts__item">
                   <a class="social-contacts__link" href="#" target="_blank">
                     <svg>
@@ -86,9 +98,23 @@
               </ul>
             </address>
 
-            <button class="page-navigation__close">
+            <button class="menu-mob__close">
               <span class="sr-only">Закрыть меню</span>
             </button>
+          </div>
+
+          <div class="page-navigation">
+            <ul class="page-navigation__list page-navigation--menu">
+              <li class="page-navigation__item">
+                <a class="page-navigation__link page-navigation__link--active link-animation" href="#">Главная</a>
+              </li>
+              <li class="page-navigation__item">
+                <a class="page-navigation__link link-animation" href="#">Блюда</a>
+              </li>
+              <li class="page-navigation__item">
+                <a class="page-navigation__link link-animation" href="#">Контакты</a>
+              </li>
+            </ul>
           </div>
 
           <ul class="user-nav">
@@ -450,8 +476,7 @@
                     <svg class="restaurant-card__svg-timer">
                       <use xlink:href="images/sprite.svg#icon-timer"></use>
                     </svg>
-                    <span class="restaurant-card__open-start">11:00 -</span>
-                    <span class="restaurant-card__open-finish">22:00</span>
+                    <span class="restaurant-card__time">11:00 - 22:00</span>
                   </div>
                   <a class="restaurant-card__btn btn-animation" href="#">
                     <svg class="restaurant-card__svg-arrow">
@@ -476,8 +501,7 @@
                     <svg class="restaurant-card__svg-timer">
                       <use xlink:href="images/sprite.svg#icon-timer"></use>
                     </svg>
-                    <span class="restaurant-card__open-start">12:00 -</span>
-                    <span class="restaurant-card__open-finish">21:00</span>
+                    <span class="restaurant-card__time">12:00 - 21:00</span>
                   </div>
                   <a class="restaurant-card__btn btn-animation" href="#">
                     <svg class="restaurant-card__svg-arrow">
@@ -502,8 +526,7 @@
                     <svg class="restaurant-card__svg-timer">
                       <use xlink:href="images/sprite.svg#icon-timer"></use>
                     </svg>
-                    <span class="restaurant-card__open-start">11:00 -</span>
-                    <span class="restaurant-card__open-finish">22:00</span>
+                    <span class="restaurant-card__time">11:00 - 22:00</span>
                   </div>
                   <a class="restaurant-card__btn btn-animation" href="#">
                     <svg class="restaurant-card__svg-arrow">
@@ -528,8 +551,7 @@
                     <svg class="restaurant-card__svg-timer">
                       <use xlink:href="images/sprite.svg#icon-timer"></use>
                     </svg>
-                    <span class="restaurant-card__open-start">06:00 -</span>
-                    <span class="restaurant-card__open-finish">23:00</span>
+                  <span class="restaurant-card__time">06:00 - 23:00</span>
                   </div>
                   <a class="restaurant-card__btn btn-animation" href="#">
                     <svg class="restaurant-card__svg-arrow">
@@ -554,8 +576,7 @@
                     <svg class="restaurant-card__svg-timer">
                       <use xlink:href="images/sprite.svg#icon-timer"></use>
                     </svg>
-                    <span class="restaurant-card__open-start">06:00 -</span>
-                    <span class="restaurant-card__open-finish">23:30</span>
+                    <span class="restaurant-card__time">06:00 - 23:00</span>
                   </div>
                   <a class="restaurant-card__btn btn-animation" href="#">
                     <svg class="restaurant-card__svg-arrow">
@@ -580,8 +601,160 @@
                     <svg class="restaurant-card__svg-timer">
                       <use xlink:href="images/sprite.svg#icon-timer"></use>
                     </svg>
-                    <span class="restaurant-card__open-start">09:00 -</span>
-                    <span class="restaurant-card__open-finish">21:00</span>
+                    <span class="restaurant-card__time">09:00 - 21:00</span>
+                  </div>
+                  <a class="restaurant-card__btn btn-animation" href="#">
+                    <svg class="restaurant-card__svg-arrow">
+                      <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <span class="sr-only">открыть страницу ресторана</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <ul class="best-restaurants__slider">
+          <li class="best-restaurants__item">
+            <article class="restaurant-card">
+              <img src="images/best-restaurants/blaze-pizza.jpg" width="370" height="300" alt="фото пиццы из этого ресторана"
+                class="restaurant-card__img">
+        
+              <div class="restaurant-card__info">
+                <h3 class="restaurant-card__title">Blaze Pizza</h3>
+        
+                <div class="restaurant-card__inner">
+                  <div class="restaurant-card__open">
+                    <svg class="restaurant-card__svg-timer">
+                      <use xlink:href="images/sprite.svg#icon-timer"></use>
+                    </svg>
+                  <span class="restaurant-card__time">11:00 - 22:00</span>
+                  </div>
+                  <a class="restaurant-card__btn btn-animation" href="#">
+                    <svg class="restaurant-card__svg-arrow">
+                      <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <span class="sr-only">открыть страницу ресторана</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
+        
+          <li class="best-restaurants__item">
+            <article class="restaurant-card">
+              <img src="images/best-restaurants/pizza-runcho.jpg" width="370" height="300" alt="фото пиццы из этого ресторана"
+                class="restaurant-card__img">
+              <div class="restaurant-card__info">
+                <h3 class="restaurant-card__title">Pizza Runcho</h3>
+        
+                <div class="restaurant-card__inner">
+                  <div class="restaurant-card__open">
+                    <svg class="restaurant-card__svg-timer">
+                      <use xlink:href="images/sprite.svg#icon-timer"></use>
+                    </svg>
+                  <span class="restaurant-card__time">12:00 - 21:00</span>
+                  </div>
+                  <a class="restaurant-card__btn btn-animation" href="#">
+                    <svg class="restaurant-card__svg-arrow">
+                      <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <span class="sr-only">открыть страницу ресторана</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
+        
+          <li class="best-restaurants__item">
+            <article class="restaurant-card">
+              <img src="images/best-restaurants/pizza-hut.jpg" width="370" height="300" alt="фото пиццы из этого ресторана"
+                class="restaurant-card__img">
+              <div class="restaurant-card__info">
+                <h3 class="restaurant-card__title">Pizza Hut</h3>
+        
+                <div class="restaurant-card__inner">
+                  <div class="restaurant-card__open">
+                    <svg class="restaurant-card__svg-timer">
+                      <use xlink:href="images/sprite.svg#icon-timer"></use>
+                    </svg>
+                <span class="restaurant-card__time">11:00 - 22:00</span>
+                  </div>
+                  <a class="restaurant-card__btn btn-animation" href="#">
+                    <svg class="restaurant-card__svg-arrow">
+                      <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <span class="sr-only">открыть страницу ресторана</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
+        
+          <li class="best-restaurants__item">
+            <article class="restaurant-card">
+              <img src="images/best-restaurants/mcdonalds.jpg" width="370" height="300" alt="фото пиццы из этого ресторана"
+                class="restaurant-card__img">
+              <div class="restaurant-card__info">
+                <h3 class="restaurant-card__title">McDonald`s</h3>
+        
+                <div class="restaurant-card__inner">
+                  <div class="restaurant-card__open">
+                    <svg class="restaurant-card__svg-timer">
+                      <use xlink:href="images/sprite.svg#icon-timer"></use>
+                    </svg>
+                  <span class="restaurant-card__time">06:00 - 23:00</span>
+                  </div>
+                  <a class="restaurant-card__btn btn-animation" href="#">
+                    <svg class="restaurant-card__svg-arrow">
+                      <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <span class="sr-only">открыть страницу ресторана</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
+        
+          <li class="best-restaurants__item">
+            <article class="restaurant-card">
+              <img src="images/best-restaurants/kfc.jpg" width="370" height="300" alt="фото пиццы из этого ресторана"
+                class="restaurant-card__img">
+              <div class="restaurant-card__info">
+                <h3 class="restaurant-card__title">KFC</h3>
+        
+                <div class="restaurant-card__inner">
+                  <div class="restaurant-card__open">
+                    <svg class="restaurant-card__svg-timer">
+                      <use xlink:href="images/sprite.svg#icon-timer"></use>
+                    </svg>
+                <span class="restaurant-card__time">16:00 - 23:30</span>
+                  </div>
+                  <a class="restaurant-card__btn btn-animation" href="#">
+                    <svg class="restaurant-card__svg-arrow">
+                      <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <span class="sr-only">открыть страницу ресторана</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
+        
+          <li class="best-restaurants__item">
+            <article class="restaurant-card">
+              <img src="images/best-restaurants/star-burgers.jpg" width="370" height="300" alt="фото пиццы из этого ресторана"
+                class="restaurant-card__img">
+              <div class="restaurant-card__info">
+                <h3 class="restaurant-card__title">Star Burgers</h3>
+        
+                <div class="restaurant-card__inner">
+                  <div class="restaurant-card__open">
+                    <svg class="restaurant-card__svg-timer">
+                      <use xlink:href="images/sprite.svg#icon-timer"></use>
+                    </svg>
+                    <span class="restaurant-card__time">09:00 - 21:00</span>
                   </div>
                   <a class="restaurant-card__btn btn-animation" href="#">
                     <svg class="restaurant-card__svg-arrow">

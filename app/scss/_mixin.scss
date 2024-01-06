@@ -28,7 +28,7 @@
 
   &__line {
     position: absolute;
-    left: 0;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
@@ -41,7 +41,7 @@
   &::after {
     content: "";
     position: absolute;
-    left: 0;
+    right: 0;
     width: 100%;
     height: $burgerLineHeight;
     background-color: currentColor;
