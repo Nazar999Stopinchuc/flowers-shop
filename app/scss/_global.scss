@@ -12,7 +12,7 @@ body {
   @extend %rubik-400;
 
   color: $accent-text-color;
-  background-color: #F9FAFF;
+  background-color: $body-background-color;
 }
 
 .sr-only {
@@ -46,8 +46,8 @@ body {
   }
 
   &:focus {
-    background: rgba(255, 255, 255, 0.01);
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.70);
+    background: rgba($btn-color, 0.01);
+    box-shadow: 0 0 0 2px rgba($accent-color, 0.702);
   }
 
   &:active {
@@ -58,16 +58,19 @@ body {
 }
 
 .btn-animation {
+  color: $btn-color;
+  background-color: $accent-color;
+  border-radius: $bord-r;
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
 
   &:hover {
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.70), 0 5px 12px 0 rgba(255, 104, 56, 0.20);
-    background-color: #FFF;
+    box-shadow: 0 0 0 2px rgba($accent-color, 0.70), 0 5px 12px 0 rgba(255, 104, 56, 0.20);
+    background-color: $btn-color;
     color: $accent-color;
   }
 
   &:focus {
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.70);
+    box-shadow: 0 0 0 2px rgba($accent-color, 0.70);
     background-color: rgba(255, 122, 80, 0.10);
     color: $accent-color;
   }
@@ -82,8 +85,8 @@ body {
   padding-bottom: 120px;
 
   @include r(992) {
-      padding-bottom: 80px;
-    }
+    padding-bottom: 80px;
+  }
 
   @include r(768) {
     padding-bottom: 40px;
@@ -113,10 +116,4 @@ body {
     inset: 0;
     background-color: rgba(0, 0, 0, 0.50);
   }
-}
-
-
-
-.none {
-  display: none;
 }
