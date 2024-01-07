@@ -1,11 +1,17 @@
 $(function () {
-
-  $('.best-restaurants__slider').slick({
-    arrows: false,
-    infinite: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true
+  $(window).on('load resize', function () {
+    if ($(window).width() < 768) {
+      $('.best-restaurants__list:not(.slick-initialized)').slick({
+        arrows: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        speed: 1500
+      });
+    } else {
+      $('.best-restaurants__list.slick-initialized').slick('unslick');
+    }
   });
 
   $('.reviews__slider-wrap').slick({
