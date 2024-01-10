@@ -117,3 +117,13 @@ body {
     background-color: rgba(0, 0, 0, 0.50);
   }
 }
+
+.filter-title {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: $accent-title-color;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $box-shadow;
+  margin: 0 0 25px 15px;
+}
