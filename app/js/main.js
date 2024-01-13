@@ -19,6 +19,21 @@ $(function () {
     }
   });
 
+  $(window).on('load resize', function () {
+    if ($(window).width() < 768) {
+      $('.discount__wrap:not(.slick-initialized)').slick({
+        arrows: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        speed: 1500
+      });
+    } else {
+      $('.discount__wrap.slick-initialized').slick('unslick');
+    }
+  });
+
   $('.reviews__slider-wrap').slick({
     dots: true,
     infinite: false,
@@ -53,6 +68,24 @@ document.addEventListener('DOMContentLoaded', () => {
       menuMob.classList.remove('menu-mob--active');
       document.body.classList.remove('lock');
     }
+  });
+
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const filterOpen = document.querySelector('.catalog__filter-open');
+  const filterCloose = document.querySelector('.filter__close');
+  const filter = document.querySelector('.filter');
+
+  filterOpen.addEventListener('click', () => {
+    filter.classList.add('filter--active');
+    document.body.classList.add('lock-r');
+
+  });
+
+  filterCloose.addEventListener('click', () => {
+    filter.classList.remove('filter--active');
+    document.body.classList.remove('lock-r');
   });
 
 });
