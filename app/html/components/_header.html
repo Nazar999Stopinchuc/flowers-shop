@@ -13,15 +13,15 @@
           </a>
 
           <div class="page-navigation menu-mob__page-navigation">
-            <ul class="page-navigation__list page-navigation--menu">
+            <ul class="page-navigation__list page-navigation__list--menu">
               <li class="page-navigation__item">
-                <a class="page-navigation__link page-navigation__link--active link-animation" href="#">Главная</a>
+                <a class="page-navigation__link link-animation" href="index.html">Главная</a>
               </li>
               <li class="page-navigation__item">
-                <a class="page-navigation__link link-animation" href="#">Блюда</a>
+                <a class="page-navigation__link link-animation" href="catalog.html">Блюда</a>
               </li>
               <li class="page-navigation__item">
-                <a class="page-navigation__link link-animation" href="#">Контакты</a>
+                <a class="page-navigation__link link-animation" href="#contacts">Контакты</a>
               </li>
             </ul>
           </div>
@@ -60,7 +60,7 @@
                   <span class="sr-only">ссылка на фейсбук</span>
                 </a>
               </li>
-              <li class="socia-contactsl__item">
+              <li class="socia-contacts__item">
                 <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
                   <svg>
                     <use xlink:href="images/sprite.svg#icon-twitter"></use>
@@ -85,15 +85,15 @@
         </div>
 
         <div class="page-navigation">
-          <ul class="page-navigation__list page-navigation--menu">
+          <ul class="page-navigation__list page-navigation__list--menu">
             <li class="page-navigation__item">
-              <a class="page-navigation__link page-navigation__link--active link-animation" href="#">Главная</a>
+              <a class="page-navigation__link link-animation @if (context.page === 'home') {page-navigation__link--active}" href="index.html" id="home">Главная</a>
             </li>
             <li class="page-navigation__item">
-              <a class="page-navigation__link link-animation" href="#">Блюда</a>
+              <a class="page-navigation__link link-animation @if (context.page === 'catalog') {page-navigation__link--active}" href="catalog.html" id="catalog">Блюда</a>
             </li>
             <li class="page-navigation__item">
-              <a class="page-navigation__link link-animation" href="#">Контакты</a>
+              <a class="page-navigation__link link-animation @if (context.page === 'contacts') {page-navigation__link--active}" href="#contacts">Контакты</a>
             </li>
           </ul>
         </div>

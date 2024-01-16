@@ -77,7 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterCloose = document.querySelector('.filter__close');
   const filter = document.querySelector('.filter');
 
-  filterOpen.addEventListener('click', () => {
+  filterOpen.addEventListener('click', (e) => {
+    e.stopPropagation();
     filter.classList.add('filter--active');
     document.body.classList.add('lock-r');
 
@@ -86,6 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
   filterCloose.addEventListener('click', () => {
     filter.classList.remove('filter--active');
     document.body.classList.remove('lock-r');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!filter.contains(e.target) && e.target !== filterOpen) {
+      filter.classList.remove('filter--active');
+      document.body.classList.remove('lock-r');
+    }
   });
 
 });
@@ -147,8 +155,24 @@ $inputTo.on("input", function () {
   });
 });
 
+if (window.location.pathname == '/index.html') {
+  document.getElementById('home').href = "#!";
+}
 
-var mixer = mixitup('.popular-categories__content');
-mixer.filter('.category-burger');
+if (window.location.pathname == '/catalog.html') {
+  document.getElementById('catalog').href = "#!";
+  document.getElementById('catalog-bread-crumbs').href = "#!";
+  document.getElementById('pagination-active').href = "#!";
+  document.getElementById('pagination-active-arrow').href = "#!";
+}
+
+if (document.getElementById('mix')) {
+  var mixer = mixitup('.popular-categories__content');
+  mixer.filter('.category-burger');
+}
+
+
+
+
 
 

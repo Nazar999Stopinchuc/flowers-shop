@@ -32,15 +32,15 @@
           </a>
 
           <div class="page-navigation menu-mob__page-navigation">
-            <ul class="page-navigation__list page-navigation--menu">
+            <ul class="page-navigation__list page-navigation__list--menu">
               <li class="page-navigation__item">
-                <a class="page-navigation__link page-navigation__link--active link-animation" href="#">Главная</a>
+                <a class="page-navigation__link link-animation" href="index.html">Главная</a>
               </li>
               <li class="page-navigation__item">
-                <a class="page-navigation__link link-animation" href="#">Блюда</a>
+                <a class="page-navigation__link link-animation" href="catalog.html">Блюда</a>
               </li>
               <li class="page-navigation__item">
-                <a class="page-navigation__link link-animation" href="#">Контакты</a>
+                <a class="page-navigation__link link-animation" href="#contacts">Контакты</a>
               </li>
             </ul>
           </div>
@@ -79,7 +79,7 @@
                   <span class="sr-only">ссылка на фейсбук</span>
                 </a>
               </li>
-              <li class="socia-contactsl__item">
+              <li class="socia-contacts__item">
                 <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
                   <svg>
                     <use xlink:href="images/sprite.svg#icon-twitter"></use>
@@ -104,15 +104,15 @@
         </div>
 
         <div class="page-navigation">
-          <ul class="page-navigation__list page-navigation--menu">
+          <ul class="page-navigation__list page-navigation__list--menu">
             <li class="page-navigation__item">
-              <a class="page-navigation__link page-navigation__link--active link-animation" href="#">Главная</a>
+              <a class="page-navigation__link link-animation page-navigation__link--active" href="index.html" id="home">Главная</a>
             </li>
             <li class="page-navigation__item">
-              <a class="page-navigation__link link-animation" href="#">Блюда</a>
+              <a class="page-navigation__link link-animation " href="catalog.html" id="catalog">Блюда</a>
             </li>
             <li class="page-navigation__item">
-              <a class="page-navigation__link link-animation" href="#">Контакты</a>
+              <a class="page-navigation__link link-animation " href="#contacts">Контакты</a>
             </li>
           </ul>
         </div>
@@ -223,7 +223,7 @@
       </li>
     </ul>
 
-    <ul class="popular-categories__content">
+    <ul class="popular-categories__content" id="mix">
       <li class="popular-categories__box mix category-burger">
         <article class="product-card">
           <img class="product-card__img" src="images/popular-categories/cheese-burger.jpg" width="140" height="140"
@@ -737,7 +737,7 @@
   <div class="container">
     <div class="mobile-app__wrap">
       <div class="mobile-app__content">
-        <h2 class="mobile-app__title  title ">Скачайте мобильное приложение</h2>
+        <h2 class="mobile-app__title  title">Скачайте мобильное приложение</h2>
 
         <p class="mobile-app__text">
           Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и заказывайте еду в любом удобном
@@ -775,19 +775,21 @@
   <div class="container">
     <div class="footer__top">
 
-      <form class="form-subscribe">
+      <div class="form-subscribe">
         <a class="logo footer__logo" href="#">
           <img class="logo__img" src="images/logo.svg" alt="логотип">
         </a>
 
-        <label class="sr-only" for="email">Ваш email</label>
-        <input class="form-subscribe__input" type="email" placeholder="Ваш email" name="email" id="email">
-        <button class="form-subscribe__btn btn-animation" type="submit">
-          <svg>
-            <use xlink:href="images/sprite.svg#icon-telegram"></use>
-          </svg>
-          Подписаться</button>
-      </form>
+        <form class="form-subscribe__form">
+          <label class="sr-only" for="email">Ваш email</label>
+          <input class="form-subscribe__input" type="email" placeholder="Ваш email" name="email" id="email">
+          <button class="form-subscribe__btn btn-animation" type="submit">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-telegram"></use>
+            </svg>
+            Подписаться</button>
+        </form>
+      </div>
 
       <ul class="footer__list">
         <li class="footer__item">
@@ -853,7 +855,7 @@
         </li>
       </ul>
 
-      <address class="contacts footer__contacts">
+      <address class="contacts footer__contacts" id="contacts">
         <ul class="contacts__list">
           <li class="contacts__item ">
             <a class="contacts__link contacts__link--adress link-animation" href="#">
@@ -887,7 +889,7 @@
               <span class="sr-only">ссылка на фейсбук</span>
             </a>
           </li>
-          <li class="socia-contacts__item">
+          <li class="social-contacts__item">
             <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
               <svg>
                 <use xlink:href="images/sprite.svg#icon-twitter"></use>

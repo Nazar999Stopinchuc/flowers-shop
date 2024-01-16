@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
-<!DOCTYPE html>
-<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple food</title>
+  <title>Catalog</title>
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
@@ -34,15 +32,15 @@
           </a>
 
           <div class="page-navigation menu-mob__page-navigation">
-            <ul class="page-navigation__list page-navigation--menu">
+            <ul class="page-navigation__list page-navigation__list--menu">
               <li class="page-navigation__item">
-                <a class="page-navigation__link page-navigation__link--active link-animation" href="#">Главная</a>
+                <a class="page-navigation__link link-animation" href="index.html">Главная</a>
               </li>
               <li class="page-navigation__item">
-                <a class="page-navigation__link link-animation" href="#">Блюда</a>
+                <a class="page-navigation__link link-animation" href="catalog.html">Блюда</a>
               </li>
               <li class="page-navigation__item">
-                <a class="page-navigation__link link-animation" href="#">Контакты</a>
+                <a class="page-navigation__link link-animation" href="#contacts">Контакты</a>
               </li>
             </ul>
           </div>
@@ -81,7 +79,7 @@
                   <span class="sr-only">ссылка на фейсбук</span>
                 </a>
               </li>
-              <li class="socia-contactsl__item">
+              <li class="socia-contacts__item">
                 <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
                   <svg>
                     <use xlink:href="images/sprite.svg#icon-twitter"></use>
@@ -106,15 +104,15 @@
         </div>
 
         <div class="page-navigation">
-          <ul class="page-navigation__list page-navigation--menu">
+          <ul class="page-navigation__list page-navigation__list--menu">
             <li class="page-navigation__item">
-              <a class="page-navigation__link page-navigation__link--active link-animation" href="#">Главная</a>
+              <a class="page-navigation__link link-animation " href="index.html" id="home">Главная</a>
             </li>
             <li class="page-navigation__item">
-              <a class="page-navigation__link link-animation" href="#">Блюда</a>
+              <a class="page-navigation__link link-animation page-navigation__link--active" href="catalog.html" id="catalog">Блюда</a>
             </li>
             <li class="page-navigation__item">
-              <a class="page-navigation__link link-animation" href="#">Контакты</a>
+              <a class="page-navigation__link link-animation " href="#contacts">Контакты</a>
             </li>
           </ul>
         </div>
@@ -157,22 +155,23 @@
       <h2 class="sr-only">навигация по сайту</h2>
       <ul class="bread-crumbs__list">
         <li class="bread-crumbs__item">
-          <a class="bread-crumbs__link" href="#">Главная</a>
+          <a class="bread-crumbs__link link-animation" href="index.html">Главная</a>
         </li>
         <li class="bread-crumbs__item">
-          <a class="bread-crumbs__link" href="#">Каталог товаров</a>
+          <a class="bread-crumbs__link" href="catalog.html" id="catalog-bread-crumbs">Каталог товаров</a>
         </li>
       </ul>
     </div>
   </div>
   <div class="container">
     <div class="catalog__top">
-      <h2 class="title catalog__title">Каталог продуктов</h2>
+      <h1 class="title catalog__title">Каталог продуктов</h1>
 
       <button class="catalog__filter-open" type="button">
         <svg class="catalog__filter-svg">
           <use xlink:href="images/sprite.svg#icon-filter"></use>
         </svg>
+        <span class="sr-only">открыть раздел фильтр</span>
       </button>
 
       <form class="catalog__form-selects" action="#">
@@ -193,104 +192,98 @@
     </div>
 
     <div class="catalog__content">
+      <div class="filter catalog__filter">
 
-      <ul class="filter catalog__filter">
+        <button class="filter__close" type="button">
+          <span class="sr-only">закрыть раздел фильтр</span>
+        </button>
 
-        <button class="filter__close" type="button"></button>
+        <ul class="filter__list">
+          <li class="filter-category filter__item">
+            <h2 class="filter-title">Категории</h2>
+            <div class="filter__wrap">
+              <ul class="filter-category__list">
+                <li class="filter-category__item">
+                  <a class="filter-category__link link-animation" href="#">Бургеры</a>
+                </li>
+                <li class="filter-category__item">
+                  <a class="filter-category__link link-animation" href="#">Пицца</a>
+                </li>
+                <li class="filter-category__item">
+                  <a class="filter-category__link link-animation" href="#">Сендвичи</a>
+                </li>
+                <li class="filter-category__item">
+                  <a class="filter-category__link link-animation" href="#">Азиатская кухня</a>
+                </li>
+                <li class="filter-category__item">
+                  <a class="filter-category__link link-animation" href="#">Сеты</a>
+                </li>
+                <li class="filter-category__item">
+                  <a class="filter-category__link link-animation" href="#">Европейская кухня</a>
+                </li>
+                <li class="filter-category__item">
+                  <a class="filter-category__link link-animation" href="#">Напитки</a>
+                </li>
+                <li class="filter-category__item">
+                  <a class="filter-category__link link-animation" href="#">Алкоголь</a>
+                </li>
+              </ul>
+            </div>
+          </li>
 
-        <li class="filter-category filter__item">
-          <h3 class="filter-title">Категории</h3>
-          <form class="filter-category__form" action="#">
-            <label class="filter-category__label link-animation">
-              <input class="filter-category__input" type="checkbox" checked>
-              <span class="filter__name filter-category__name">Бургеры</span>
-            </label>
-          </form>
-          <form class="filter-category__form" action="#">
-            <label class="filter-category__label link-animation">
-              <input class="filter-category__input" type="checkbox">
-              <span class="filter__name filter-category__name">Пицца</span>
-            </label>
-          </form>
-          <form class="filter-category__form" action="#">
-            <label class="filter-category__label link-animation">
-              <input class="filter-category__input" type="checkbox">
-              <span class="filter__name filter-category__name">Сендвичи</span>
-            </label>
-          </form>
-          <form class="filter-category__form" action="#">
-            <label class="filter-category__label link-animation">
-              <input class="filter-category__input" type="checkbox">
-              <span class="filter__name filter-category__name">Азиатская кухня</span>
-            </label>
-          </form>
-          <form class="filter-category__form" action="#">
-            <label class="filter-category__label link-animation">
-              <input class="filter-category__input" type="checkbox">
-              <span class="filter__name filter-category__name">Сеты</span>
-            </label>
-          </form>
-          <form class="filter-category__form" action="#">
-            <label class="filter-category__label link-animation">
-              <input class="filter-category__input" type="checkbox">
-              <span class="filter__name filter-category__name">Европейская кухня</span>
-            </label>
-          </form>
-          <form class="filter-category__form" action="#">
-            <label class="filter-category__label link-animation">
-              <input class="filter-category__input" type="checkbox">
-              <span class="filter__name filter-category__name">Напитки</span>
-            </label>
-          </form>
-          <form class="filter-category__form" action="#">
-            <label class="filter-category__label link-animation">
-              <input class="filter-category__input" type="checkbox">
-              <span class="filter__name filter-category__name">Алкоголь</span>
-            </label>
-          </form>
-        </li>
+          <li class="filter-offer filter__item">
+            <h2 class="filter-title">Предложения</h2>
+            <div class="filter__wrap">
+              <form class="filter-offer__form" action="#">
+                <label class="filter-offer__label">
+                  <input class="filter-offer__input" type="checkbox" checked>
+                  <span class="filter-offer__checkbox"> </span>
+                  <span class="filter__name">Со скидкой</span>
+                </label>
+              </form>
+              <form class="filter-offer__form" action="#">
+                <label class="filter-offer__label">
+                  <input class="filter-offer__input" type="checkbox">
+                  <span class="filter-offer__checkbox"> </span>
+                  <span class="filter__name">Новинка</span>
+                </label>
+              </form>
+              <form class="filter-offer__form" action="#">
+                <label class="filter-offer__label">
+                  <input class="filter-offer__input" type="checkbox">
+                  <span class="filter-offer__checkbox"> </span>
+                  <span class="filter__name">Хит</span>
+                </label>
+              </form>
+            </div>
+          </li>
 
-        <li class="filter-offer filter__item">
-          <h3 class="filter-title">Предложения</h3>
-          <form class="filter-offer__form" action="#">
-            <label class="filter-offer__label">
-              <input class="filter-offer__input" type="checkbox" checked>
-              <span class="filter-offer__checkbox"> </span>
-              <span class="filter__name">Со скидкой</span>
-            </label>
-          </form>
-          <form class="filter-offer__form" action="#">
-            <label class="filter-offer__label">
-              <input class="filter-offer__input" type="checkbox">
-              <span class="filter-offer__checkbox"> </span>
-              <span class="filter__name">Новинка</span>
-            </label>
-          </form>
-          <form class="filter-offer__form" action="#">
-            <label class="filter-offer__label">
-              <input class="filter-offer__input" type="checkbox">
-              <span class="filter-offer__checkbox"> </span>
-              <span class="filter__name">Хит</span>
-            </label>
-          </form>
-        </li>
+          <li class="filter-price filter__item">
+            <h2 class="filter-title">Цена</h2>
+            <div class="filter__wrap">
+              <form class="filter-price__form" action="#">
+                <div class="filter-price__inner">
+                  <div class="filter-price__wrap filter-price__wrap--from">
+                    <label class="filter-price__label" for="filter-price__from">от</label>
+                    <input class="filter-price__number filter-price__number--from" type="text" value=""
+                      id="filter-price__from">
+                      <span class="filter-price__symbol">₴</span>
+                  </div>
+                  <div class="filter-price__wrap filter-price__wrap--to">
+                    <label class="filter-price__label" for="filter-price__to">до</label>
+                    <input class="filter-price__number filter-price__number--to" type="text" value="" for="filter-price__to">
+                    <span class="filter-price__symbol">₴</span>
+                  </div>
+                </div>
+                <label class="filter-price__label" for="filter-price__input"></label>
+                <input class="filter-price__input" type="text" for="filter-price__input" data-min="0" data-max="1200" data-from="100"
+                  data-to="1000">
+              </form>
+            </div>
+          </li>
 
-        <li class="filter-price filter__item">
-          <h3 class="filter-title">Цена</h3>
-          <form class="filter-price__form" action="#">
-            <label class="filter-price__label">
-              <div class="filter-price__wrap filter-price__wrap--from">
-                <input class="filter-price__number filter-price__number--from" type="text" value="">
-              </div>
-              <div class="filter-price__wrap filter-price__wrap--to">
-                <input class="filter-price__number filter-price__number--to" type="text" value="">
-              </div>
-            </label>
-            <input class="filter-price__input" type="text" data-min="0" data-max="1200" data-from="100" data-to="1000">
-          </form>
-        </li>
-
-      </ul>
+        </ul>
+      </div>
 
       <ul class="catalog__items">
         <li class="catalog__item">
@@ -407,14 +400,14 @@
     <div class="pagination">
       <ul class="pagination__list">
         <li class="pagination__item">
-          <a class="pagination__link pagination__link--active-arrow" href="#">
+          <a class="pagination__link pagination__link--active-arrow" id="pagination-active-arrow" href="#">
             <svg class="pagination__svg pagination__svg--prev">
               <use xlink:href="images/sprite.svg#icon-chevron"></use>
             </svg>
           </a>
         </li>
         <li class="pagination__item">
-          <a class="pagination__link pagination__link--active pagination-animation" href="#">1</a>
+          <a class="pagination__link pagination__link--active pagination-animation" href="#" id="pagination-active">1</a>
         </li>
         <li class="pagination__item">
           <a class="pagination__link pagination-animation" href="#">2</a>
@@ -445,7 +438,7 @@
   <div class="container">
     <div class="mobile-app__wrap">
       <div class="mobile-app__content">
-        <h2 class="mobile-app__title  title ">Скачайте мобильное приложение</h2>
+        <h2 class="mobile-app__title  title">Скачайте мобильное приложение</h2>
 
         <p class="mobile-app__text">
           Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и заказывайте еду в любом удобном
@@ -484,9 +477,9 @@
         <article class="restaurant-card">
           <img src="images/best-restaurants/blaze-pizza.jpg" width="370" height="300"
             alt="фото пиццы из этого ресторана" class="restaurant-card__img">
-          <p class="restaurant-card__text-discount">
+          <h3 class="restaurant-card__text-discount">
             Скидка 50% на вторую пиццу
-          </p>
+          </h3>
         </article>
       </li>
 
@@ -494,9 +487,9 @@
         <article class="restaurant-card">
           <img src="images/best-restaurants/kfc.jpg" width="370" height="300" alt="фото пиццы из этого ресторана"
             class="restaurant-card__img">
-          <p class="restaurant-card__text-discount">
+          <h3 class="restaurant-card__text-discount">
             Картошечка из KFC даром при заказе бургера
-          </p>
+          </h3>
         </article>
       </li>
 
@@ -504,9 +497,9 @@
         <article class="restaurant-card">
           <img src="images/best-restaurants/star-burgers.jpg" width="370" height="300"
             alt="фото пиццы из этого ресторана" class="restaurant-card__img">
-          <p class="restaurant-card__text-discount">
+          <h3 class="restaurant-card__text-discount">
             Чёрные бургеры на чёрный день
-          </p>
+          </h3>
         </article>
       </li>
 
@@ -520,19 +513,21 @@
   <div class="container">
     <div class="footer__top">
 
-      <form class="form-subscribe">
+      <div class="form-subscribe">
         <a class="logo footer__logo" href="#">
           <img class="logo__img" src="images/logo.svg" alt="логотип">
         </a>
 
-        <label class="sr-only" for="email">Ваш email</label>
-        <input class="form-subscribe__input" type="email" placeholder="Ваш email" name="email" id="email">
-        <button class="form-subscribe__btn btn-animation" type="submit">
-          <svg>
-            <use xlink:href="images/sprite.svg#icon-telegram"></use>
-          </svg>
-          Подписаться</button>
-      </form>
+        <form class="form-subscribe__form">
+          <label class="sr-only" for="email">Ваш email</label>
+          <input class="form-subscribe__input" type="email" placeholder="Ваш email" name="email" id="email">
+          <button class="form-subscribe__btn btn-animation" type="submit">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-telegram"></use>
+            </svg>
+            Подписаться</button>
+        </form>
+      </div>
 
       <ul class="footer__list">
         <li class="footer__item">
@@ -598,7 +593,7 @@
         </li>
       </ul>
 
-      <address class="contacts footer__contacts">
+      <address class="contacts footer__contacts" id="contacts">
         <ul class="contacts__list">
           <li class="contacts__item ">
             <a class="contacts__link contacts__link--adress link-animation" href="#">
@@ -632,7 +627,7 @@
               <span class="sr-only">ссылка на фейсбук</span>
             </a>
           </li>
-          <li class="socia-contacts__item">
+          <li class="social-contacts__item">
             <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
               <svg>
                 <use xlink:href="images/sprite.svg#icon-twitter"></use>
