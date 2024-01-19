@@ -27,5 +27,9 @@
     "mixitup": "^3.3.1",
     "sass": "^1.69.5",
     "slick-carousel": "^1.8.1"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^4.0.30",
+    "rateyo": "^2.3.2"
   }
 }

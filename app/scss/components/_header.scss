@@ -27,5 +27,20 @@
 
   }
 
+  &__wrapper {
+    display: block;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: padding 0.4s;
+
+    &--fixed {
+      position: fixed;
+      z-index: 998;
+      padding: 20px 0;
+      background-color: $accent-catalog-color;
+    }
+  }
 
 }
