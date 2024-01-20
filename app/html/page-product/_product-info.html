@@ -1,5 +1,5 @@
 <section class="product-info section">
-  <div class="bread-crumbs catalog__bread-crumbs">
+  <div class="bread-crumbs product-info__bread-crumbs">
     <div class="container">
       <h2 class="sr-only">навигация по сайту</h2>
       <ul class="bread-crumbs__list">
@@ -73,13 +73,15 @@
 
 
           <div class="product-info__counter" id="counter">
-            <button class="product-info__minus btn-animation" type="button">
-              <div class="product-info__minus-symbol symbol"></div>
-            </button>
-            <span class="product-info__quantity">1</span>
-            <button class="product-info__plus btn-animation" type="button">
-              <div class="product-info__plus-symbol symbol"></div>
-            </button>
+            <div class="product-info__counter-wrap">
+              <button class="product-info__minus btn-animation" type="button">
+                <div class="product-info__minus-symbol symbol"></div>
+              </button>
+              <span class="product-info__quantity">1</span>
+              <button class="product-info__plus btn-animation" type="button">
+                <div class="product-info__plus-symbol symbol"></div>
+              </button>
+            </div>
             <button class="product-info__add-btn btn-animation" type="button">
               <svg class="product-info__counter-svg">
                 <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -121,10 +123,10 @@
             горчицей,
             луком и маринованными огурчиками.
           </p>
-          <p class="tabs__characteristics-text">
+          <p class="tabs__text">
             Аллергены: Глютен, Молоко, Горчица, Может содержать сою, яйцо, следы кунжута
           </p>
-          <p class="tabs__characteristics-text">
+          <p class="tabs__text">
             Внешний вид товара может отличаться от изображений, представленных на сайте.
           </p>
         </li>
@@ -255,7 +257,7 @@
 
                   <div class="review-response__form">
                     <label class="review-response__form-label" for="tel">Email *</label>
-                    <input class="review-response__form-input" type="email" id="tel" name="tel"
+                    <input class="review-response__form-input review-response__form-input--mail" type="email" id="tel" name="tel"
                       placeholder="youremail@mail.com" required>
                   </div>
                 </div>

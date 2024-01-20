@@ -1,4 +1,16 @@
 .product-info {
+  &__bread-crumbs {
+    margin-bottom: 60px;
+
+    @include mq ('phone') {
+      & .bread-crumbs__item:not(:first-child):not(:last-child) {
+        display: none;
+      }
+
+      margin-bottom: 30px;
+    }
+  }
+
   &__top-wrap {
     border-bottom: 1px solid $product-line-color;
     margin-bottom: 30px;
@@ -7,6 +19,14 @@
   &__top {
     display: flex;
     padding-bottom: 60px;
+
+    @include mq ('tablet-2') {
+      flex-direction: column;
+    }
+
+    @include mq ('phone') {
+      padding-bottom: 30px;
+    }
   }
 
   &__slider {
@@ -19,6 +39,15 @@
     max-width: 610px;
     width: 100%;
     background-color: $btn-color;
+
+    @include mq ('desktop') {
+      max-width: 510px;
+    }
+
+    @include mq ('tablet-2') {
+      margin: 0 auto 30px;
+      max-width: 100%;
+    }
   }
 
   &__img {
@@ -32,6 +61,10 @@
 
   &__title {
     margin-bottom: 30px;
+
+    @include mq ('phone') {
+      margin-bottom: 15px;
+    }
   }
 
   &__rating {
@@ -52,6 +85,18 @@
   &__counter {
     display: flex;
     margin-bottom: 30px;
+
+    @include mq ('desktop') {
+      flex-direction: column;
+    }
+  }
+
+  &__counter-wrap {
+    display: flex;
+
+    @include mq ('desktop') {
+      margin-bottom: 15px;
+    }
   }
 
   &__minus,
@@ -123,6 +168,7 @@
 
   &__add-btn {
     position: relative;
+    max-width: 270px;
     padding: 13px 38px 13px 70px;
     margin-left: 20px;
     font-size: 14px;
@@ -134,6 +180,10 @@
     &:focus svg,
     &:active svg {
       stroke: $accent-color;
+    }
+
+    @include mq ('desktop') {
+      margin-left: 0;
     }
   }
 
@@ -156,6 +206,11 @@
     padding-bottom: 15px;
     border-bottom: 1px solid $product-line-color;
     margin-bottom: 20px;
+
+    @include mq ('phone') {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
   }
 
   &__description {
@@ -170,4 +225,56 @@
     line-height: .85;
     border-radius: 3px 3px 0 0;
   }
+}
+
+.fancybox__backdrop {
+  background-color: $btn-color;
+}
+
+.carousel__button svg {
+  width: 60px;
+  height: 60px;
+  stroke: $product-text-color;
+  transition: stroke 0.3s;
+}
+
+.carousel__button:hover svg {
+  stroke: $accent-color;
+}
+
+.carousel__button.is-close svg {
+  width: 32px;
+  height: 32px;
+  stroke: $accent-symbol-color;
+  transition: stroke 0.3s;
+}
+
+.carousel__button.is-close:hover svg {
+  stroke: $accent-color;
+}
+
+.carousel__dots {
+  top:calc(100% - 87px);
+  gap: 10px;
+}
+
+.carousel__dots .carousel__dot:after {
+  width: 15px;
+  height: 15px;
+  background-color: $accent-symbol-color;
+}
+
+.carousel__dot.is-selected::after {
+  background-color: $accent-color;
+  transition: background-color, opacity 0.3s;
+}
+
+.carousel__dot:hover::after {
+  background-color: $accent-color;
+  opacity: 1;
+}
+
+.fancybox__image {
+  width: 750px;
+  height: 750px;
 }

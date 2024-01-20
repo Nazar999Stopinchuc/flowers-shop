@@ -5,16 +5,29 @@
   &__control {
     display: flex;
     margin-bottom: 30px;
+
+    @include mq ('tablet') {
+      overflow-x: auto;
+    }
+
+    @include mq ('phone') {
+      margin-bottom: 15px;
+    }
   }
 
   &__control-item:not(:last-child) {
     margin-right: 60px;
+
+    @include mq ('phone') {
+      margin-right: 30px;
+    }
   }
 
   &__tab {
     font-size: 24px;
     color: $accent-title-color;
     border-radius: 3px;
+    white-space: nowrap;
 
     &--active {
       color: $accent-color;
@@ -22,6 +35,10 @@
 
     &:focus {
       box-shadow: none;
+    }
+
+    @include mq ('phone') {
+      font-size: 20px;
     }
   }
 
@@ -35,10 +52,18 @@
 
   &__text {
     margin-bottom: 15px;
+
+    @include mq ('phone') {
+      font-size: 16px;
+    }
   }
 
   &__options-item {
     margin-bottom: 5px;
+
+    @include mq ('phone') {
+      font-size: 16px;
+    }
   }
 
   &__option {
@@ -51,6 +76,11 @@
     font-weight: 500;
     line-height: 1.2;
     margin-bottom: 30px;
+
+    @include mq ('phone') {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
   }
 
   &__review {
@@ -67,11 +97,21 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
+
+    @include mq ('phone') {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
   }
 
   &__user-info {
     padding-left: 95px;
     position: relative;
+
+    @include mq ('phone') {
+      margin-bottom: 15px;
+    }
   }
 
   &__user-img {

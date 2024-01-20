@@ -61,6 +61,31 @@ $(function () {
     infinite: false,
     slidesToShow: 5,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 560,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+          dots: true,
+        }
+      }
+    ]
+
   });
 
   $('.reviews__slider-wrap').slick({
@@ -69,7 +94,7 @@ $(function () {
     responsive: [
       {
         breakpoint: 768,
-        dots: false
+        dots: false,
       }
     ]
   });
@@ -230,7 +255,7 @@ if (window.location.pathname === '/catalog.html') {
 if (window.location.pathname === '/product.html') {
   const myCarousel = new Carousel(document.querySelector("#productCarousel"), {
     preload: 1,
-    Dots: true,
+    Dots: false,
   });
 
   Fancybox.bind('[data-fancybox="gallery"]', {
