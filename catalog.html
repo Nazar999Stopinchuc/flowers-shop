@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#fc784e">
+  <meta name="msapplication-TileColor" content="#fc784e">
+  <meta name="theme-color" content="#fc784e">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header__wrapper">
+    <div class="container">
+      <div class="header__inner">
+
+        <nav class="menu">
+          <a class="logo menu__logo" href="index.html">
+            <img class="logo__img logo__img--menu" src="images/logo.svg" alt="логотип" width="200" height="30">
+          </a>
+          
+          <div class="page-navigation">
+            <ul class="page-navigation__list page-navigation__list--menu">
+              <li class="page-navigation__item">
+                <a class="page-navigation__link link-animation "
+                  href="index.html" id="home">Main</a>
+              </li>
+              <li class="page-navigation__item">
+                <a class="page-navigation__link link-animation page-navigation__link--active"
+                  href="catalog.html" id="catalog">Gallery</a>
+              </li>
+              <li class="page-navigation__item">
+                <a class="page-navigation__link link-animation "
+                  href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="user-nav">
+            <li class="user-nav__item">
+              <button class="user-nav__btn" type="button">
+                <svg class="user-nav__svg">
+                  <use xlink:href="images/sprite.svg#search"></use>
+                </svg>
+                <span class="sr-only">button open search</span>
+              </button>
+            </li>
+            <li class="user-nav__item">
+              <button class="user-nav__btn" type="button">
+                <svg class="user-nav__svg">
+                  <use xlink:href="images/sprite.svg#icon-cart"></use>
+                </svg>
+                <span class="sr-only">open cart button</span>
+                <span class="user-nav__numb">4</span>
+              </button>
+            </li>
+          </ul>
+
+          <button class="burger" type="button">
+            <span class="burger__line"></span>
+            <span class="sr-only">Open menu</span>
+          </button>
+
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+  
+
+ <div class="menu-mob">
+  <a class="logo menu-mob__logo" href="#">
+    <img class="logo__img" src="images/logo.svg" alt="логотип">
+  </a>
+
+  <div class="page-navigation menu-mob__page-navigation">
+    <ul class="page-navigation__list page-navigation__list--menu">
+      <li class="page-navigation__item">
+        <a class="page-navigation__link link-animation" href="index.html">Main</a>
+      </li>
+      <li class="page-navigation__item">
+        <a class="page-navigation__link link-animation" href="catalog.html">Gallery</a>
+      </li>
+      <li class="page-navigation__item">
+        <a class="page-navigation__link link-animation" href="#contacts">Contacts</a>
+      </li>
+    </ul>
+  </div>
+
+  <address class="contacts menu-mob__contacts">
+    <ul class="contacts__list">
+      <li class="contacts__item ">
+        <a class="contacts__link contacts__link--adress link-animation" href="#">
+          <svg class="contacts__svg">
+            <use xlink:href="images/sprite.svg#icon-location"></use>
+          </svg>
+          2875 St.Clair Ave Est</a>
+      </li>
+      <li class="contacts__item">
+        <a class="contacts__link contacts__link--tel link-animation" href="tel:4165039081">
+          <svg class="contacts__svg">
+            <use xlink:href="images/sprite.svg#icon-call"></use>
+          </svg>
+          416-503-9081</a>
+      </li>
+      <li class="contacts__item">
+        <a class="contacts__link contacts__link--mail link-animation" href="mailto:support@julysflowers.com">
+          <svg class="contacts__svg">
+            <use xlink:href="images/sprite.svg#icon-message"></use>
+          </svg>
+          support@julysflowers.com</a>
+      </li>
+    </ul>
+
+    <ul class="social-contacts menu-mob__social-contacts">
+      <li class="social-contacts__item">
+        <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+          <svg>
+            <use xlink:href="images/sprite.svg#icon-facebook"></use>
+          </svg>
+          <span class="sr-only">link to facebook</span>
+        </a>
+      </li>
+      <li class="socia-contacts__item">
+        <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+          <svg>
+            <use xlink:href="images/sprite.svg#icon-twitter"></use>
+          </svg>
+          <span class="sr-only">twitter link</span>
+        </a>
+      </li>
+      <li class="social-contacts__item">
+        <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+          <svg>
+            <use xlink:href="images/sprite.svg#icon-instagram"></use>
+          </svg>
+          <span class="sr-only">link to instagram</span>
+        </a>
+      </li>
+    </ul>
+  </address>
+
+  <button class="menu-mob__close" type="button">
+    <span class="sr-only">Close menu</span>
+  </button>
+</div>
+
+<main class="main">
+
+  <section class="catalog section">
+  <div class="bread-crumbs catalog__bread-crumbs">
+    <div class="container">
+      <h2 class="sr-only">site navigation</h2>
+      <ul class="bread-crumbs__list">
+        <li class="bread-crumbs__item">
+          <a class="bread-crumbs__link link-animation" href="index.html">Main</a>
+        </li>
+        <li class="bread-crumbs__item">
+          <a class="bread-crumbs__link" href="catalog.html" id="catalog-bread-crumbs">Catalog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="catalog__top">
+      <h1 class="title catalog__title">Catalog</h1>
+
+      <button class="catalog__filter-open" type="button">
+        <svg class="catalog__filter-svg">
+          <use xlink:href="images/sprite.svg#icon-filter"></use>
+        </svg>
+        <span class="sr-only">open the filter section</span>
+      </button>
+
+      <form class="catalog__form-selects" action="#">
+        <select class="catalog__select">
+          <option value="">By name</option>
+          <option value="">By name</option>
+          <option value="">By name</option>
+          <option value="">By name</option>
+        </select>
+
+        <select class="catalog__select">
+          <option value="">12</option>
+          <option value="">12</option>
+          <option value="">12</option>
+          <option value="">12</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="catalog__content">
+      <div class="filter catalog__filter">
+
+        <button class="filter__close" type="button" id="filter">
+          <span class="sr-only">close the filter section</span>
+        </button>
+
+        <ul class="filter__list">
+          <li class="filter-category filter__item">
+            <h2 class="filter-title">Categories</h2>
+            <div class="filter__wrap">
+              <ul class="filter-category__list">
+                <li class="filter-category__item">
+                  <a class="filter-category__link link-animation" href="#">Tulips</a>
+                </li>
+                <li class="filter-category__item">
+                  <a class="filter-category__link link-animation" href="#">Roses</a>
+                </li>
+                <li class="filter-category__item">
+                  <a class="filter-category__link link-animation" href="#">Bridal</a>
+                </li>
+                <li class="filter-category__item">
+                  <a class="filter-category__link link-animation" href="#">Bouquets</a>
+                </li>
+                <li class="filter-category__item">
+                  <a class="filter-category__link link-animation" href="#">Wedding decor</a>
+                </li>
+                <li class="filter-category__item">
+                  <a class="filter-category__link link-animation" href="#">Sweet bouquets</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="filter-offer filter__item">
+            <h2 class="filter-title">Offers</h2>
+            <div class="filter__wrap">
+              <form class="filter-offer__form" action="#">
+                <label class="filter-offer__label">
+                  <input class="filter-offer__input" type="checkbox" checked>
+                  <span class="filter-offer__checkbox"> </span>
+                  <span class="filter__name">New</span>
+                </label>
+              </form>
+              <form class="filter-offer__form" action="#">
+                <label class="filter-offer__label">
+                  <input class="filter-offer__input" type="checkbox">
+                  <span class="filter-offer__checkbox"> </span>
+                  <span class="filter__name">Popular</span>
+                </label>
+              </form>
+            </div>
+          </li>
+
+          <li class="filter-price filter__item">
+            <h2 class="filter-title">Price</h2>
+            <div class="filter__wrap">
+              <form class="filter-price__form" action="#">
+                <div class="filter-price__inner">
+                  <div class="filter-price__wrap filter-price__wrap--from">
+                    <label class="filter-price__label" for="filter-price__from">from</label>
+                    <input class="filter-price__number filter-price__number--from" type="text" value=""
+                      id="filter-price__from">
+                      <span class="filter-price__symbol">$</span>
+                  </div>
+                  <div class="filter-price__wrap filter-price__wrap--to">
+                    <label class="filter-price__label" for="filter-price__to">to</label>
+                    <input class="filter-price__number filter-price__number--to" type="text" value="" id="filter-price__to">
+                    <span class="filter-price__symbol">$</span>
+                  </div>
+                </div>
+                <label class="filter-price__label" for="filter-price__input"></label>
+                <input class="filter-price__input" type="text" for="filter-price__input" data-min="0" data-max="1200" data-from="100"
+                  data-to="1000">
+              </form>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <ul class="catalog__items">
+        <li class="catalog__item">
+          <article class="product-card">
+            <a href="product.html" class="product-card__link"></a>
+            <img class="product-card__img" src="images/popular-categories/category-tulips-1.jpg" width="140" height="140"
+              alt="bouquet image">
+            <span class="product-card__price">$120</span>
+            <button class="product-card__content-btn btn-animation" type="button">Add</button>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <a href="product.html" class="product-card__link"></a>
+            <img class="product-card__img" src="images/popular-categories/category-tulips-2.jpg" width="140" height="140"
+              alt="bouquet image">
+            <span class="product-card__price">$120</span>
+            <button class="product-card__content-btn btn-animation" type="button">Add</button>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <a href="product.html" class="product-card__link"></a>
+            <img class="product-card__img" src="images/popular-categories/category-tulips-3.jpg" width="140" height="140"
+              alt="bouquet image">
+            <span class="product-card__price">$120</span>
+            <button class="product-card__content-btn btn-animation" type="button">Add</button>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <a href="product.html" class="product-card__link"></a>
+            <img class="product-card__img" src="images/popular-categories/category-tulips-4.jpg" width="140" height="140"
+              alt="bouquet image">
+            <span class="product-card__price">$120</span>
+            <button class="product-card__content-btn btn-animation" type="button">Add</button>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <a href="product.html" class="product-card__link"></a>
+            <img class="product-card__img" src="images/popular-categories/category-tulips-5.jpg" width="140" height="140"
+              alt="bouquet image">
+            <span class="product-card__price">$120</span>
+            <button class="product-card__content-btn btn-animation" type="button">Add</button>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <a href="product.html" class="product-card__link"></a>
+            <img class="product-card__img" src="images/popular-categories/category-tulips-6.jpg" width="140" height="140"
+              alt="bouquet image">
+            <span class="product-card__price">$120</span>
+            <button class="product-card__content-btn btn-animation" type="button">Add</button>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <a href="product.html" class="product-card__link"></a>
+            <img class="product-card__img" src="images/popular-categories/category-tulips-7.jpg" width="140" height="140"
+              alt="bouquet image">
+            <span class="product-card__price">$120</span>
+            <button class="product-card__content-btn btn-animation" type="button">Add</button>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <a href="product.html" class="product-card__link"></a>
+            <img class="product-card__img" src="images/popular-categories/category-tulips-8.jpg" width="140" height="140"
+              alt="bouquet image">
+            <span class="product-card__price">$120</span>
+            <button class="product-card__content-btn btn-animation" type="button">Add</button>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <a href="product.html" class="product-card__link"></a>
+            <img class="product-card__img" src="images/popular-categories/category-tulips-9.jpg" width="140" height="140"
+              alt="bouquet image">
+            <span class="product-card__price">$120</span>
+            <button class="product-card__content-btn btn-animation" type="button">Add</button>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <a href="product.html" class="product-card__link"></a>
+            <img class="product-card__img" src="images/popular-categories/category-tulips-10.jpg" width="140" height="140"
+              alt="bouquet image">
+            <span class="product-card__price">$120</span>
+            <button class="product-card__content-btn btn-animation" type="button">Add</button>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <a href="product.html" class="product-card__link"></a>
+            <img class="product-card__img" src="images/popular-categories/category-tulips-1.jpg" width="140" height="140"
+              alt="bouquet image">
+            <span class="product-card__price">$120</span>
+            <button class="product-card__content-btn btn-animation" type="button">Add</button>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <a href="product.html" class="product-card__link"></a>
+            <img class="product-card__img" src="images/popular-categories/category-tulips-2.jpg" width="140" height="140"
+              alt="bouquet image">
+            <span class="product-card__price">$120</span>
+            <button class="product-card__content-btn btn-animation" type="button">Add</button>
+          </article>
+        </li>
+      </ul>
+    </div>
+
+    <div class="pagination">
+      <ul class="pagination__list">
+        <li class="pagination__item">
+          <a class="pagination__link pagination__link--active-arrow" id="pagination-active-arrow" href="#">
+            <svg class="pagination__svg pagination__svg--prev">
+              <use xlink:href="images/sprite.svg#icon-chevron"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link pagination__link--active pagination-animation" href="#" id="pagination-active">1</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link pagination-animation" href="#">2</a>
+        </li>
+        <li class="pagination__item">
+          <span class="pagination__link">...</span>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link pagination-animation" href="#">9</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link pagination-animation" href="#">10</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link pagination-animation" href="#">
+            <svg class="pagination__svg pagination__svg--next">
+              <use xlink:href="images/sprite.svg#icon-chevron"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+  <section class="banner section">
+
+  <div class="banner__top">
+    <div class="banner__top-wrap">
+      <div class="banner__img" style="background-image: url(images/banner/spring-sale.jpg);"></div>
+      <div class="banner__img" style="background-image: url(images/banner/spring-sale.jpg);"></div>
+    </div>
+    <span class="banner__dates">03.15 - 4.15</span>
+  </div>
+
+  <div class="banner__bottum">
+    <div class="banner__bottum-wrap">
+      <a class="banner__link link-animation" href="#">Buy now</a>
+      <img class="banner__arrow-link" src="images/banner/banner-arrow.png" alt="">
+    </div>
+  </div>
+
+</section>
+
+  <section class="discount section">
+  <div class="container">
+    <h2 class="title">Offers</h2>
+    <ul class="discount__wrap">
+      <li class="discount__item">
+        <article class="restaurant-card">
+          <img src="images/offers/offers-1.jpg" width="370" height="300"
+            alt="фото пиццы из этого ресторана" class="restaurant-card__img">
+          <h3 class="restaurant-card__text-discount">
+            Spring sale 30% for all items
+          </h3>
+        </article>
+      </li>
+
+      <li class="discount__item">
+        <article class="restaurant-card">
+          <img src="images/offers/offers-2.jpg" width="370" height="300" alt="фото пиццы из этого ресторана"
+            class="restaurant-card__img">
+          <h3 class="restaurant-card__text-discount">
+            Free delivery for orders over $200
+          </h3>
+        </article>
+      </li>
+
+      <li class="discount__item">
+        <article class="restaurant-card">
+          <img src="images/offers/offers-3.jpg" width="370" height="300"
+            alt="фото пиццы из этого ресторана" class="restaurant-card__img">
+          <h3 class="restaurant-card__text-discount">
+            Buy 3 bouquets and get a discount $30 for next order.
+          </h3>
+        </article>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+
+      <div class="form-subscribe">
+        <a class="logo footer__logo" href="index.html">
+          <img class="logo__img" src="images/logo.svg" alt="логотип">
+        </a>
+
+        <form class="form-subscribe__form">
+          <label class="sr-only" for="email">Yor email</label>
+          <input class="form-subscribe__input" type="email" placeholder="Ваш email" name="email" id="email">
+          <button class="form-subscribe__btn btn-animation" type="submit">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-telegram"></use>
+            </svg>
+            Subscribe</button>
+        </form>
+      </div>
+
+      <address class="contacts footer__contacts" id="contacts">
+        <ul class="contacts__list">
+          <li class="contacts__item ">
+            <a class="contacts__link contacts__link--adress link-animation" href="#">
+              <svg class="contacts__svg">
+                <use xlink:href="images/sprite.svg#icon-location"></use>
+              </svg>
+              2875 St.Clair Ave Est</a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--tel link-animation" href="tel:4165039081">
+              <svg class="contacts__svg">
+                <use xlink:href="images/sprite.svg#icon-call"></use>
+              </svg>
+              416-503-9081</a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--mail link-animation" href="mailto:support@julysflowers.com">
+              <svg class="contacts__svg">
+                <use xlink:href="images/sprite.svg#icon-message"></use>
+              </svg>
+              support@julysflowers.com</a>
+          </li>
+        </ul>
+
+        <ul class="social-contacts">
+          <li class="social-contacts__item">
+            <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-facebook"></use>
+              </svg>
+              <span class="sr-only">link to facebook</span>
+            </a>
+          </li>
+          <li class="social-contacts__item">
+            <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-twitter"></use>
+              </svg>
+              <span class="sr-only">twitter link</span>
+            </a>
+          </li>
+          <li class="social-contacts__item">
+            <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-instagram"></use>
+              </svg>
+              <span class="sr-only">link to instagram</span>
+            </a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <span class="footer__bottom-text">
+      © 2022 July’s Flowers
+    </span>
+  </div>
+
+</footer>
+
+<script src="js/main.min.js"></script>
+</body>
+
+</html>
