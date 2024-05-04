@@ -124,6 +124,7 @@
 
   &__content {
     display: flex;
+
     margin-bottom: 60px;
 
     @include mq ('tablet-2') {
@@ -139,6 +140,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    flex-basis: 100%;
 
     @include mq ('tablet-2') {
       grid-template-columns: repeat(2, 1fr);
@@ -151,6 +153,10 @@
     @include mq ('phone') {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+
+  &__item article {
+    background-color: $accent-catalog-color;
   }
 
   &__item:nth-child(n + 9) {

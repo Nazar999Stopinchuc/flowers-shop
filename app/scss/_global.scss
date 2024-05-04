@@ -110,6 +110,7 @@ body {
 
 .section {
   padding-bottom: 120px;
+  position: relative;
 
   @include mq('tablet-2') {
     padding-bottom: 80px;
@@ -126,6 +127,7 @@ body {
   line-height: 1.3;
   font-weight: 500;
   color: $accent-title-color;
+  @extend %rubik-500;
 
   @include mq('tablet') {
     margin-bottom: 30px;
@@ -167,6 +169,47 @@ body {
   font-weight: 400;
   color: $accent-title-color;
   padding-bottom: 15px;
-  border-bottom: 1px solid $box-shadow;
+  border-bottom: 1px solid $accent-color;
   padding: 15px;
 }
+
+.cursor-dekor {
+  display: block;
+  position: absolute;
+  z-index: 200;
+  width: 50px;
+  height: 50px;
+  background-image: url('../images/top-screen/flover-decor.png');
+  @extend %bg;
+  animation-name: cursor-anim;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cursor-anim {
+  0% {
+    opacity: 0.5;
+    scale: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(100vh);
+    scale: 0.5;
+  }
+}
+
+    @keyframes jumping-delivery {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+  
+      100% {
+        transform: translateY(0);
+      }
+    }
+

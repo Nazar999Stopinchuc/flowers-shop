@@ -68,11 +68,13 @@
 
   &__option {
     font-weight: 500;
+    color: $accent-color;
   }
 
   &__title {
-    color: $accent-title-color;
-    font-size: 24px;
+    @extend %SquarePeg-400;
+    color: $accent-color;
+    font-size: 45px;
     font-weight: 500;
     line-height: 1.2;
     margin-bottom: 30px;
@@ -88,7 +90,7 @@
   }
 
   &__review:not(:last-child) {
-    border-bottom: 1px solid $product-line-color;
+    border-bottom: 1px solid $accent-color;
     margin-bottom: 25px;
   }
 
@@ -134,6 +136,7 @@
   &__user-name {
     font-weight: 500;
     margin-bottom: 3px;
+    color: $accent-color;
   }
 
   &__user-date {
@@ -141,7 +144,8 @@
   }
 
   &__review-text {
-    color: $product-text-color;
+    color: $accent-text-color;
+    @extend %rubik-500;
 
       @include mq ('phone') { 
         font-size: 16px;

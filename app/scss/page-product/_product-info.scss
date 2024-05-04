@@ -12,7 +12,7 @@
   }
 
   &__top-wrap {
-    border-bottom: 1px solid $product-line-color;
+    border-bottom: 1px solid $accent-color;
     margin-bottom: 30px;
   }
 
@@ -39,7 +39,7 @@
     height: 550px;
     max-width: 610px;
     width: 100%;
-    background-color: $btn-color;
+    background-color: $accent-catalog-color;
 
     @include mq ('desktop') {
       max-width: 510px;
@@ -178,12 +178,13 @@
   }
 
   &__subtitle {
-    color: $accent-title-color;
-    font-size: 24px;
+    @extend %SquarePeg-400;
+    color: $accent-color;
+    font-size: 47px;
     line-height: 1.2;
     font-weight: 400;
     padding-bottom: 15px;
-    border-bottom: 1px solid $product-line-color;
+    border-bottom: 1px solid $accent-color;
     margin-bottom: 20px;
 
     @include mq ('phone') {
@@ -193,14 +194,15 @@
   }
 
   &__description {
-    font-size: 16px;
-    color: $product-text-color;
+    font-size: 18px;
+    color: $accent-text-color;
+    @extend %rubik-500;
     margin-bottom: 20px;
   }
 
   &__detailed {
     columns: $accent-title-color;
-    border-bottom: 2px solid currentColor;
+    border-bottom: 2px solid $accent-color;
     display: inline-block;
     line-height: 0.85;
 
@@ -219,7 +221,7 @@
 }
 
 .fancybox__backdrop {
-  background-color: $btn-color;
+  background-color: $accent-catalog-color;
 }
 
 .carousel__button svg {

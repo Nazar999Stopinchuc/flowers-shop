@@ -12,15 +12,15 @@
             <ul class="page-navigation__list page-navigation__list--menu">
               <li class="page-navigation__item">
                 <a class="page-navigation__link link-animation @if (context.page === 'home') {page-navigation__link--active}"
-                  href="index.html" id="home">Главная</a>
+                  href="index.html" id="home">Main</a>
               </li>
               <li class="page-navigation__item">
                 <a class="page-navigation__link link-animation @if (context.page === 'catalog') {page-navigation__link--active}"
-                  href="catalog.html" id="catalog">Блюда</a>
+                  href="catalog.html" id="catalog">Gallery</a>
               </li>
               <li class="page-navigation__item">
                 <a class="page-navigation__link link-animation @if (context.page === 'contacts') {page-navigation__link--active}"
-                  href="#contacts">Контакты</a>
+                  href="#contacts">Contacts</a>
               </li>
             </ul>
           </div>
@@ -31,7 +31,7 @@
                 <svg class="user-nav__svg">
                   <use xlink:href="images/sprite.svg#search"></use>
                 </svg>
-                <span class="sr-only">кнопка открыть поиск</span>
+                <span class="sr-only">button open search</span>
               </button>
             </li>
             <li class="user-nav__item">
@@ -39,7 +39,7 @@
                 <svg class="user-nav__svg">
                   <use xlink:href="images/sprite.svg#icon-cart"></use>
                 </svg>
-                <span class="sr-only">кнопка открыть корзину</span>
+                <span class="sr-only">open cart button</span>
                 <span class="user-nav__numb">4</span>
               </button>
             </li>
@@ -47,7 +47,7 @@
 
           <button class="burger" type="button">
             <span class="burger__line"></span>
-            <span class="sr-only">Открыть меню</span>
+            <span class="sr-only">Open menu</span>
           </button>
 
         </nav>

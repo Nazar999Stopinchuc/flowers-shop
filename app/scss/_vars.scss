@@ -1,8 +1,9 @@
-$accent-color: #ff6838;
-$accent-catalog-color: #FAEDED;
-$accent-text-color: #31352b;
-$accent-title-color: #363853;
-$accent-symbol-color: #c2c2c2;
+$accent-color: #FD4386;
+$accent-color-second:#FFB1CD;
+$accent-catalog-color: #FDEFF4;
+$accent-text-color: #032F60;
+$accent-title-color: #032F60;
+$accent-symbol-color: #032F60;
 $body-background-color: #f9faff;
 $btn-color: #ffffff;
 $box-shadow: #ECECEC;
@@ -18,23 +19,28 @@ $breakpoints: (
 );
 
 %rubik-300 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'ShipporiMinchoB1';
   font-weight: 300;
 }
 
 %rubik-400 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-}
-
-%rubik-italic {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'ShipporiMinchoB1';
   font-weight: 400;
 }
 
 %rubik-500 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'ShipporiMinchoB1';
   font-weight: 500;
+}
+
+%rubik-700 {
+  font-family: 'ShipporiMinchoB1';
+  font-weight: 700;
+}
+
+%SquarePeg-400 {
+  font-family: 'SquarePeg';
+  font-weight: 400;
 }
 
 %bg {

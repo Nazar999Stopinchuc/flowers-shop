@@ -1,39 +1,49 @@
 @font-face {
-  font-family: 'Rubik';
+  font-family: 'ShipporiMinchoB1';
   font-weight: 300;
   font-style: normal;
   src: 
-    url('../fonts/Rubik-Light.woff2') format('woff2'), 
-    url('../fonts/Rubik-Light.woff') format('woff');
+    url('../fonts/ShipporiMinchoB1-Regular.woff2') format('woff2'), 
+    url('../fonts/ShipporiMinchoB1-Regular.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Rubik';
-  font-weight: 400;
-  font-style: italic;
-  src:
-    url('../fonts/Rubik-Italic.woff2') format('woff2'), 
-    url('../fonts/Rubik-Italic.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rubik';
+  font-family: 'ShipporiMinchoB1';
   font-weight: 400;
   font-style: normal;
-  src: 
-    url('../fonts/Rubik-Regular.woff2') format('woff2'),
-    url('../fonts/Rubik-Regular.woff') format('woff');
+  src:
+    url('../fonts/ShipporiMinchoB1-Medium.woff2') format('woff2'), 
+    url('../fonts/ShipporiMinchoB1-Medium.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Rubik';
+  font-family: 'ShipporiMinchoB1';
   font-weight: 500;
   font-style: normal;
   src: 
-       url('../fonts/Rubik-Medium.woff2') format('woff2'),
-       url('../fonts/Rubik-Medium.woff') format('woff');
+    url('../fonts/ShipporiMinchoB1-Bold.woff2') format('woff2'),
+    url('../fonts/ShipporiMinchoB1-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ShipporiMinchoB1';
+  font-weight: 700;
+  font-style: normal;
+  src: 
+       url('../fonts/ShipporiMinchoB1-Bold.woff2') format('woff2'),
+       url('../fonts/ShipporiMinchoB1-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SquarePeg';
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url('../fonts/SquarePeg-Regular.woff2') format('woff2'),
+    url('../fonts/SquarePeg-Regular.woff') format('woff');
   font-display: swap;
 }

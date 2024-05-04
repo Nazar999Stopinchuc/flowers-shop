@@ -27,6 +27,7 @@
     width: 300px;
     height: 300px;
     border-radius: 50%;
+    object-fit: cover;
     @extend %bg;
     margin-right: 80px;
 
@@ -125,7 +126,7 @@
         transition: background-color 0.3s, border-color 0.3s, opacity 0.3s, box-shadow 0.3s;
 
         &:hover {
-          background-color: rgba(255, 122, 80, 0.10);
+          background-color: rgba($accent-color, 0.10);
           border-color: $accent-color;
           opacity: 0.6;
         }
@@ -159,17 +160,17 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    border: 3px solid $accent-symbol-color;
+    border: 4px solid $accent-symbol-color;
     transition: background-color 0.3s, border-color 0.3s, opacity 0.3s, box-shadow 0.3s, filter 0.3s;
 
     &:hover {
-      background: rgba(255, 122, 80, 0.10);
+      background: rgba($accent-color, 0.10);
       border-color: $accent-color;
       opacity: 0.6;
     }
 
     &:hover::before {
-      filter: invert(64%) sepia(47%) saturate(5801%) hue-rotate(336deg) brightness(101%) contrast(103%);
+      filter: invert(64%) sepia(83%) saturate(5255%) hue-rotate(311deg) brightness(96%) contrast(108%);
     }
 
     &:focus {
@@ -177,18 +178,18 @@
     }
 
     &:focus::before {
-      filter: invert(51%) sepia(61%) saturate(2442%) hue-rotate(336deg) brightness(100%) contrast(102%);
+      filter: invert(64%) sepia(83%) saturate(5255%) hue-rotate(311deg) brightness(96%) contrast(108%);
     }
 
     &:active {
       opacity: 1;
-      background: rgba(255, 122, 80, 0.10);
-      border-color: rgba(255, 122, 80, 0.10);
+      background: rgba($accent-color, 0.10);
+      border-color: rgba($accent-color, 0.10);
       box-shadow: none;
     }
 
     &:active::before {
-      filter: invert(64%) sepia(47%) saturate(5801%) hue-rotate(336deg) brightness(101%) contrast(103%);
+      filter: invert(64%) sepia(83%) saturate(5255%) hue-rotate(311deg) brightness(96%) contrast(108%);
     }
 
     @include mq('tablet') {
@@ -245,25 +246,30 @@
     content: "";
     position: absolute;
     width: 12px;
-    height: 18px;
+    height: 21px;
     @extend %bg;
     background-size: contain;
+    background-color: #032f60;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+
   }
 
   .slick-prev::before {
-    background-image: url('../images/icon/icon-chevron.svg');
+    -webkit-mask-image: url("../images/icon/icon-chevron.svg");
     transform: rotateY(180deg);
   }
 
   .slick-next::before {
-    background-image: url('../images/icon/icon-chevron.svg');
+    -webkit-mask-image: url("../images/icon/icon-chevron.svg");
   }
 
   .slick-disabled {
     border-color: $accent-color;
 
     &::before {
-      filter: invert(64%) sepia(47%) saturate(5801%) hue-rotate(336deg) brightness(101%) contrast(103%);
+      filter: invert(64%) sepia(83%) saturate(5255%) hue-rotate(311deg) brightness(96%) contrast(108%);
     }
   }
 

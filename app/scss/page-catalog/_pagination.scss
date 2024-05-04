@@ -32,11 +32,11 @@
     transition: background-color, color, border-color, box-shadow, 0.3s;
 
     &--active {
-      border: 1px solid $accent-title-color;
+      border: 1px solid $accent-color;
     }
 
     &--active-arrow .pagination__svg {
-      fill: $accent-symbol-color;
+      fill: $accent-color;
     }
   }
 

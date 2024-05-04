@@ -1,0 +1,73 @@
+.banner {
+  padding: 0;
+  background-color: #FDEFF4;
+  overflow: hidden;
+  max-width: 100%;
+
+
+  &__top {
+    height: 40vh;
+    position: relative;
+  }
+
+  &__top-wrap {
+    height: 100%;
+    display: flex;
+    width: 200%;
+    animation-name: banner;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    @extend %bg;
+  }
+
+  @keyframes banner {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  &__dates {
+    font-size: 45px;
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+  }
+
+  &__bottum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    background-color: $accent-color-second;
+  }
+
+  &__link {
+    display: block;
+    font-size: 36px;
+    color: $btn-color;
+  }
+
+  &__bottum-wrap {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__arrow-link {
+    height: 45px;
+    width: 45px;
+  }
+}

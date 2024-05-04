@@ -5,7 +5,7 @@
       display: flex;
       gap: 5px;
       margin-bottom: 30px;
-      max-width: 560px;
+      // max-width: 560px;
     }
   }
 
@@ -31,7 +31,7 @@
     height: 57px;
     padding: 18px 10px 18px 18px;
     border-radius: 5px;
-    border: 1px solid $accent-symbol-color;
+    border: 1px solid $accent-color;
     transition: border-color 0.3s;
 
     &:focus {
@@ -39,12 +39,13 @@
     }
 
     &:hover::placeholder {
-      color: $product-text-color;
+      color: $accent-text-color;
     }
 
     &::placeholder {
-      color: $accent-symbol-color;
+      color: $accent-color;
       transition: color 0.3s;
+      font-size: 16px;
     }
 
     &--message {
@@ -83,8 +84,9 @@
   }
 
   &__save-label {
-    font-size: 18px;
-    color: $product-text-color;
+    font-size: 33px;
+    color: $accent-color;
+    @extend %SquarePeg-400;
     cursor: pointer;
   }
 
