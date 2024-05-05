@@ -22,19 +22,15 @@
     }
 
     @include mq('tablet-2') {
+      margin-right: 0;
       position: absolute;
-      top: 0;
-      right: 0;
+      height: 90%;
+      width: 90%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       opacity: 0.4;
       z-index: -1;
-    }
-
-    @include mq('tablet') {
-      top: 0;
-      right: 20px;
-      margin-right: 0;
-      height: 462px;
-      max-width: 348px;
     }
   }
 
@@ -43,7 +39,7 @@
     padding-top: 60px;
 
     @include mq('tablet') {
-      padding-top: 25px;
+      padding: 25px 20px 0;
     }
   }
 

@@ -28,6 +28,20 @@
   }
 }
 
+@mixin mh($height, $type: max) {
+  @if map_has_key($breakpoints, $height) {
+    $height: map_get($breakpoints, $height);
+
+    @if $type ==max {
+      $height: $height - 1px;
+    }
+
+    @media only screen and (#{$type}-height: $height) {
+      @content;
+    }
+  }
+}
+
 @mixin burger ($burgerWidth, $burgerHeight, $burgerLineHeight, $burgerColor) {
   width: $burgerWidth; 
   height: $burgerHeight;

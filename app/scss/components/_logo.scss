@@ -12,8 +12,8 @@
 
     &--menu {
       @include mq('tablet') {
-        max-width: 115px;
-        max-height: 23px;
+        min-width: 115px;
+        min-height: 23px;
         object-fit: contain
       }
     }

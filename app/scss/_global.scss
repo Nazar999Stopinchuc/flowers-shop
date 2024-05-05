@@ -64,7 +64,7 @@ body {
   transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
 
   &:hover {
-    box-shadow: 0 0 0 2px rgba($accent-color, 0.70), 0 5px 12px 0 rgba(255, 104, 56, 0.20);
+    box-shadow: rgba($accent-color, 0.5) 0px 3px 30px 0px;
     background-color: $btn-color;
     color: $accent-color;
   }
@@ -199,17 +199,16 @@ body {
   }
 }
 
-    @keyframes jumping-delivery {
-      0% {
-        transform: translateY(0);
-      }
+@keyframes jumping-delivery {
+  0% {
+    transform: translateY(0);
+  }
 
-      50% {
-        transform: translateY(-20px);
-      }
-  
-      100% {
-        transform: translateY(0);
-      }
-    }
+  50% {
+    transform: translateY(-20px);
+  }
 
+  100% {
+    transform: translateY(0);
+  }
+}
