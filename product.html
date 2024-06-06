@@ -17,7 +17,7 @@
 
 <body>
 
-<header class="header">
+<header class="header" id="header">
   <div class="header__wrapper">
     <div class="container">
       <div class="header__inner">
@@ -54,13 +54,13 @@
               </button>
             </li>
             <li class="user-nav__item">
-              <button class="user-nav__btn" type="button">
+              <a class="user-nav__btn" href="cart.html">
                 <svg class="user-nav__svg">
                   <use xlink:href="images/sprite.svg#icon-cart"></use>
                 </svg>
                 <span class="sr-only">open cart button</span>
-                <span class="user-nav__numb">4</span>
-              </button>
+                <span class="user-nav__numb">0</span>
+              </a>
             </li>
           </ul>
 
@@ -78,80 +78,82 @@
   
 
 <div class="menu-mob">
-  <a class="logo menu-mob__logo" href="#">
-    <img class="logo__img" src="images/logo.svg" alt="логотип">
-  </a>
+  <div class="menu-mob__content">
+    <a class="logo menu-mob__logo" href="#">
+      <img class="logo__img" src="images/logo.svg" alt="логотип">
+    </a>
 
-  <div class="page-navigation menu-mob__page-navigation">
-    <ul class="page-navigation__list page-navigation__list--menu">
-      <li class="page-navigation__item">
-        <a class="page-navigation__link link-animation" href="index.html">Main</a>
-      </li>
-      <li class="page-navigation__item">
-        <a class="page-navigation__link link-animation" href="catalog.html">Gallery</a>
-      </li>
-      <li class="page-navigation__item">
-        <a class="page-navigation__link link-animation" href="#contacts">Contacts</a>
-      </li>
-    </ul>
+    <div class="page-navigation menu-mob__page-navigation">
+      <ul class="page-navigation__list page-navigation__list--menu">
+        <li class="page-navigation__item">
+          <a class="page-navigation__link link-animation" href="index.html">Main</a>
+        </li>
+        <li class="page-navigation__item">
+          <a class="page-navigation__link link-animation" href="catalog.html">Gallery</a>
+        </li>
+        <li class="page-navigation__item">
+          <a class="page-navigation__link link-animation" href="#contacts">Contacts</a>
+        </li>
+      </ul>
+    </div>
+
+    <address class="contacts menu-mob__contacts">
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--adress link-animation" href="#">
+            <svg class="contacts__svg">
+              <use xlink:href="images/sprite.svg#icon-location"></use>
+            </svg>
+            2875 St.Clair Ave Est</a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--tel link-animation" href="tel:4165039081">
+            <svg class="contacts__svg">
+              <use xlink:href="images/sprite.svg#icon-call"></use>
+            </svg>
+            416-503-9081</a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--mail link-animation" href="mailto:support@julysflowers.com">
+            <svg class="contacts__svg">
+              <use xlink:href="images/sprite.svg#icon-message"></use>
+            </svg>
+            support@julysflowers.com</a>
+        </li>
+      </ul>
+
+      <ul class="social-contacts menu-mob__social-contacts">
+        <li class="social-contacts__item">
+          <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-facebook"></use>
+            </svg>
+            <span class="sr-only">link to facebook</span>
+          </a>
+        </li>
+        <li class="socia-contacts__item">
+          <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-twitter"></use>
+            </svg>
+            <span class="sr-only">twitter link</span>
+          </a>
+        </li>
+        <li class="social-contacts__item">
+          <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-instagram"></use>
+            </svg>
+            <span class="sr-only">link to instagram</span>
+          </a>
+        </li>
+      </ul>
+    </address>
+
+    <button class="menu-mob__close" type="button">
+      <span class="sr-only">Close menu</span>
+    </button>
   </div>
-
-  <address class="contacts menu-mob__contacts">
-    <ul class="contacts__list">
-      <li class="contacts__item ">
-        <a class="contacts__link contacts__link--adress link-animation" href="#">
-          <svg class="contacts__svg">
-            <use xlink:href="images/sprite.svg#icon-location"></use>
-          </svg>
-          2875 St.Clair Ave Est</a>
-      </li>
-      <li class="contacts__item">
-        <a class="contacts__link contacts__link--tel link-animation" href="tel:4165039081">
-          <svg class="contacts__svg">
-            <use xlink:href="images/sprite.svg#icon-call"></use>
-          </svg>
-          416-503-9081</a>
-      </li>
-      <li class="contacts__item">
-        <a class="contacts__link contacts__link--mail link-animation" href="mailto:support@julysflowers.com">
-          <svg class="contacts__svg">
-            <use xlink:href="images/sprite.svg#icon-message"></use>
-          </svg>
-          support@julysflowers.com</a>
-      </li>
-    </ul>
-
-    <ul class="social-contacts menu-mob__social-contacts">
-      <li class="social-contacts__item">
-        <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
-          <svg>
-            <use xlink:href="images/sprite.svg#icon-facebook"></use>
-          </svg>
-          <span class="sr-only">link to facebook</span>
-        </a>
-      </li>
-      <li class="socia-contacts__item">
-        <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
-          <svg>
-            <use xlink:href="images/sprite.svg#icon-twitter"></use>
-          </svg>
-          <span class="sr-only">twitter link</span>
-        </a>
-      </li>
-      <li class="social-contacts__item">
-        <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
-          <svg>
-            <use xlink:href="images/sprite.svg#icon-instagram"></use>
-          </svg>
-          <span class="sr-only">link to instagram</span>
-        </a>
-      </li>
-    </ul>
-  </address>
-
-  <button class="menu-mob__close" type="button">
-    <span class="sr-only">Close menu</span>
-  </button>
 </div>
 
 <main class="main">
@@ -542,7 +544,7 @@
     <div class="footer__top">
 
       <div class="form-subscribe">
-        <a class="logo footer__logo" href="index.html">
+        <a class="logo footer__logo" href="#header">
           <img class="logo__img" src="images/logo.svg" alt="логотип">
         </a>
 
