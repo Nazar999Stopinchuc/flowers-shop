@@ -3,6 +3,10 @@ html {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -81,6 +85,11 @@ body {
   }
 }
 
+.active-btn {
+  background-color: $btn-color;
+  color: $accent-color;
+}
+
 .pagination-animation {
   &:hover {
     background-color: $accent-color;
@@ -135,34 +144,6 @@ body {
   }
 }
 
-.lock {
-  overflow: hidden;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 998;
-    background-color: rgba(0, 0, 0, 0.50);
-  }
-}
-
-.lock-r {
-  overflow: hidden;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 998;
-    background-color: rgba(0, 0, 0, 0.50);
-  }
-}
-
 .filter-title {
   font-size: 24px;
   line-height: 1.2;
@@ -209,6 +190,19 @@ body {
   }
 
   100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes show-card {
+  0% {
+    scale: 0.8;
+
+    transform: translateY(30%);
+  }
+
+  100% {
+    scale: 1;
     transform: translateY(0);
   }
 }

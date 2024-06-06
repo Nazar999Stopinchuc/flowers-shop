@@ -11,6 +11,13 @@
     scale: 1.1;
   }
 
+  @include mq('tablet') {
+    &:hover {
+      box-shadow: none;
+      scale: 1;
+    }
+  }
+
   &__img {
     height: 300px;
     width: 370px;
@@ -78,7 +85,7 @@
     &:focus svg {
       fill: $accent-color;
       right: 50%;
-      transform: translateX(50%);
+      transform: translate(30%, -50%);
     }
   }
 

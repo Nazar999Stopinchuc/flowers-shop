@@ -57,38 +57,74 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 5vh;
+    height: 8vh;
     width: 100%;
     background-color: $accent-color-second;
+
+    @include mq ('tablet') {
+      height: 5vh;
+    }
   }
 
   &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s;
+
+    &:hover .banner__bottum-text {
+      color: $accent-color;
+    }
+
+    &:hover .banner__svg-arrow {
+      fill: $btn-color;
+    }
+
+    &:hover .banner__arrow-wrap {
+      background-color: $accent-color;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+
+  }
+
+  &__bottum-text {
     display: block;
     font-size: 36px;
     color: $btn-color;
+    transition: color 0.3s;
 
     @include mq ('tablet') {
       font-size: 25px;
     }
   }
 
-  &__bottum-wrap {
+  &__arrow-wrap {
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background-color: $btn-color;
+    border-radius: 50%;
+    transition: background-color 0.3s;
 
     @include mq ('tablet') {
-      gap: 15px;
+      height: 30px;
+      width: 30px;
     }
   }
 
-  &__arrow-link {
-    height: 45px;
-    width: 45px;
-
-    @include mq ('tablet') {
-      height: 25px;
-      width: 25px;
-    }
+  &__svg-arrow {
+    height: 40px;
+    width: 40px;
+    fill: $accent-color-second;
+    transition: fill 0.3s;
   }
 }

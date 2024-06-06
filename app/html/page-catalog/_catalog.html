@@ -42,91 +42,94 @@
 
     <div class="catalog__content">
       <div class="filter catalog__filter">
+        <div class="filter__content">
 
-        <button class="filter__close" type="button" id="filter">
-          <span class="sr-only">close the filter section</span>
-        </button>
+          <button class="filter__close" type="button" id="filter">
+            <span class="sr-only">close the filter section</span>
+          </button>
 
-        <ul class="filter__list">
-          <li class="filter-category filter__item">
-            <h2 class="filter-title">Categories</h2>
-            <div class="filter__wrap">
-              <ul class="filter-category__list">
-                <li class="filter-category__item">
-                  <a class="filter-category__link link-animation" href="#">Tulips</a>
-                </li>
-                <li class="filter-category__item">
-                  <a class="filter-category__link link-animation" href="#">Roses</a>
-                </li>
-                <li class="filter-category__item">
-                  <a class="filter-category__link link-animation" href="#">Bridal</a>
-                </li>
-                <li class="filter-category__item">
-                  <a class="filter-category__link link-animation" href="#">Bouquets</a>
-                </li>
-                <li class="filter-category__item">
-                  <a class="filter-category__link link-animation" href="#">Wedding decor</a>
-                </li>
-                <li class="filter-category__item">
-                  <a class="filter-category__link link-animation" href="#">Sweet bouquets</a>
-                </li>
-              </ul>
-            </div>
-          </li>
+          <ul class="filter__list">
+            <li class="filter-category filter__item">
+              <h2 class="filter-title">Categories</h2>
+              <div class="filter__wrap">
+                <ul class="filter-category__list">
+                  <li class="filter-category__item">
+                    <a class="filter-category__link link-animation" href="#">Tulips</a>
+                  </li>
+                  <li class="filter-category__item">
+                    <a class="filter-category__link link-animation" href="#">Roses</a>
+                  </li>
+                  <li class="filter-category__item">
+                    <a class="filter-category__link link-animation" href="#">Bridal</a>
+                  </li>
+                  <li class="filter-category__item">
+                    <a class="filter-category__link link-animation" href="#">Bouquets</a>
+                  </li>
+                  <li class="filter-category__item">
+                    <a class="filter-category__link link-animation" href="#">Wedding decor</a>
+                  </li>
+                  <li class="filter-category__item">
+                    <a class="filter-category__link link-animation" href="#">Sweet bouquets</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-          <li class="filter-offer filter__item">
-            <h2 class="filter-title">Offers</h2>
-            <div class="filter__wrap">
-              <form class="filter-offer__form" action="#">
-                <label class="filter-offer__label">
-                  <input class="filter-offer__input" type="checkbox" checked>
-                  <span class="filter-offer__checkbox"> </span>
-                  <span class="filter__name">New</span>
-                </label>
-              </form>
-              <form class="filter-offer__form" action="#">
-                <label class="filter-offer__label">
-                  <input class="filter-offer__input" type="checkbox">
-                  <span class="filter-offer__checkbox"> </span>
-                  <span class="filter__name">Popular</span>
-                </label>
-              </form>
-            </div>
-          </li>
+            <li class="filter-offer filter__item">
+              <h2 class="filter-title">Offers</h2>
+              <div class="filter__wrap">
+                <form class="filter-offer__form" action="#">
+                  <label class="filter-offer__label">
+                    <input class="filter-offer__input" type="checkbox" checked>
+                    <span class="filter-offer__checkbox"> </span>
+                    <span class="filter__name">New</span>
+                  </label>
+                </form>
+                <form class="filter-offer__form" action="#">
+                  <label class="filter-offer__label">
+                    <input class="filter-offer__input" type="checkbox">
+                    <span class="filter-offer__checkbox"> </span>
+                    <span class="filter__name">Popular</span>
+                  </label>
+                </form>
+              </div>
+            </li>
 
-          <li class="filter-price filter__item">
-            <h2 class="filter-title">Price</h2>
-            <div class="filter__wrap">
-              <form class="filter-price__form" action="#">
-                <div class="filter-price__inner">
-                  <div class="filter-price__wrap filter-price__wrap--from">
-                    <label class="filter-price__label" for="filter-price__from">from</label>
-                    <input class="filter-price__number filter-price__number--from" type="text" value=""
-                      id="filter-price__from">
+            <li class="filter-price filter__item">
+              <h2 class="filter-title">Price</h2>
+              <div class="filter__wrap">
+                <form class="filter-price__form" action="#">
+                  <div class="filter-price__inner">
+                    <div class="filter-price__wrap filter-price__wrap--from">
+                      <label class="filter-price__label" for="filter-price__from">from</label>
+                      <input class="filter-price__number filter-price__number--from" type="text" value=""
+                        id="filter-price__from">
                       <span class="filter-price__symbol">$</span>
+                    </div>
+                    <div class="filter-price__wrap filter-price__wrap--to">
+                      <label class="filter-price__label" for="filter-price__to">to</label>
+                      <input class="filter-price__number filter-price__number--to" type="text" value=""
+                        id="filter-price__to">
+                      <span class="filter-price__symbol">$</span>
+                    </div>
                   </div>
-                  <div class="filter-price__wrap filter-price__wrap--to">
-                    <label class="filter-price__label" for="filter-price__to">to</label>
-                    <input class="filter-price__number filter-price__number--to" type="text" value="" id="filter-price__to">
-                    <span class="filter-price__symbol">$</span>
-                  </div>
-                </div>
-                <label class="filter-price__label" for="filter-price__input"></label>
-                <input class="filter-price__input" type="text" for="filter-price__input" data-min="0" data-max="1200" data-from="100"
-                  data-to="1000">
-              </form>
-            </div>
-          </li>
+                  <label class="filter-price__label" for="filter-price__input"></label>
+                  <input class="filter-price__input" type="text" for="filter-price__input" data-min="0" data-max="1200"
+                    data-from="100" data-to="1000">
+                </form>
+              </div>
+            </li>
 
-        </ul>
+          </ul>
+        </div>
       </div>
 
       <ul class="catalog__items">
         <li class="catalog__item">
           <article class="product-card">
             <a href="product.html" class="product-card__link"></a>
-            <img class="product-card__img" src="images/popular-categories/category-tulips-1.jpg" width="140" height="140"
-              alt="bouquet image">
+            <img class="product-card__img" src="images/popular-categories/category-tulips-1.jpg" width="140"
+              height="140" alt="bouquet image">
             <span class="product-card__price">$120</span>
             <button class="product-card__content-btn btn-animation" type="button">Add</button>
           </article>
@@ -134,8 +137,8 @@
         <li class="catalog__item">
           <article class="product-card">
             <a href="product.html" class="product-card__link"></a>
-            <img class="product-card__img" src="images/popular-categories/category-tulips-2.jpg" width="140" height="140"
-              alt="bouquet image">
+            <img class="product-card__img" src="images/popular-categories/category-tulips-2.jpg" width="140"
+              height="140" alt="bouquet image">
             <span class="product-card__price">$120</span>
             <button class="product-card__content-btn btn-animation" type="button">Add</button>
           </article>
@@ -143,8 +146,8 @@
         <li class="catalog__item">
           <article class="product-card">
             <a href="product.html" class="product-card__link"></a>
-            <img class="product-card__img" src="images/popular-categories/category-tulips-3.jpg" width="140" height="140"
-              alt="bouquet image">
+            <img class="product-card__img" src="images/popular-categories/category-tulips-3.jpg" width="140"
+              height="140" alt="bouquet image">
             <span class="product-card__price">$120</span>
             <button class="product-card__content-btn btn-animation" type="button">Add</button>
           </article>
@@ -152,8 +155,8 @@
         <li class="catalog__item">
           <article class="product-card">
             <a href="product.html" class="product-card__link"></a>
-            <img class="product-card__img" src="images/popular-categories/category-tulips-4.jpg" width="140" height="140"
-              alt="bouquet image">
+            <img class="product-card__img" src="images/popular-categories/category-tulips-4.jpg" width="140"
+              height="140" alt="bouquet image">
             <span class="product-card__price">$120</span>
             <button class="product-card__content-btn btn-animation" type="button">Add</button>
           </article>
@@ -161,8 +164,8 @@
         <li class="catalog__item">
           <article class="product-card">
             <a href="product.html" class="product-card__link"></a>
-            <img class="product-card__img" src="images/popular-categories/category-tulips-5.jpg" width="140" height="140"
-              alt="bouquet image">
+            <img class="product-card__img" src="images/popular-categories/category-tulips-5.jpg" width="140"
+              height="140" alt="bouquet image">
             <span class="product-card__price">$120</span>
             <button class="product-card__content-btn btn-animation" type="button">Add</button>
           </article>
@@ -170,8 +173,8 @@
         <li class="catalog__item">
           <article class="product-card">
             <a href="product.html" class="product-card__link"></a>
-            <img class="product-card__img" src="images/popular-categories/category-tulips-6.jpg" width="140" height="140"
-              alt="bouquet image">
+            <img class="product-card__img" src="images/popular-categories/category-tulips-6.jpg" width="140"
+              height="140" alt="bouquet image">
             <span class="product-card__price">$120</span>
             <button class="product-card__content-btn btn-animation" type="button">Add</button>
           </article>
@@ -179,8 +182,8 @@
         <li class="catalog__item">
           <article class="product-card">
             <a href="product.html" class="product-card__link"></a>
-            <img class="product-card__img" src="images/popular-categories/category-tulips-7.jpg" width="140" height="140"
-              alt="bouquet image">
+            <img class="product-card__img" src="images/popular-categories/category-tulips-7.jpg" width="140"
+              height="140" alt="bouquet image">
             <span class="product-card__price">$120</span>
             <button class="product-card__content-btn btn-animation" type="button">Add</button>
           </article>
@@ -188,8 +191,8 @@
         <li class="catalog__item">
           <article class="product-card">
             <a href="product.html" class="product-card__link"></a>
-            <img class="product-card__img" src="images/popular-categories/category-tulips-8.jpg" width="140" height="140"
-              alt="bouquet image">
+            <img class="product-card__img" src="images/popular-categories/category-tulips-8.jpg" width="140"
+              height="140" alt="bouquet image">
             <span class="product-card__price">$120</span>
             <button class="product-card__content-btn btn-animation" type="button">Add</button>
           </article>
@@ -197,8 +200,8 @@
         <li class="catalog__item">
           <article class="product-card">
             <a href="product.html" class="product-card__link"></a>
-            <img class="product-card__img" src="images/popular-categories/category-tulips-9.jpg" width="140" height="140"
-              alt="bouquet image">
+            <img class="product-card__img" src="images/popular-categories/category-tulips-9.jpg" width="140"
+              height="140" alt="bouquet image">
             <span class="product-card__price">$120</span>
             <button class="product-card__content-btn btn-animation" type="button">Add</button>
           </article>
@@ -206,8 +209,8 @@
         <li class="catalog__item">
           <article class="product-card">
             <a href="product.html" class="product-card__link"></a>
-            <img class="product-card__img" src="images/popular-categories/category-tulips-10.jpg" width="140" height="140"
-              alt="bouquet image">
+            <img class="product-card__img" src="images/popular-categories/category-tulips-10.jpg" width="140"
+              height="140" alt="bouquet image">
             <span class="product-card__price">$120</span>
             <button class="product-card__content-btn btn-animation" type="button">Add</button>
           </article>
@@ -215,8 +218,8 @@
         <li class="catalog__item">
           <article class="product-card">
             <a href="product.html" class="product-card__link"></a>
-            <img class="product-card__img" src="images/popular-categories/category-tulips-1.jpg" width="140" height="140"
-              alt="bouquet image">
+            <img class="product-card__img" src="images/popular-categories/category-tulips-1.jpg" width="140"
+              height="140" alt="bouquet image">
             <span class="product-card__price">$120</span>
             <button class="product-card__content-btn btn-animation" type="button">Add</button>
           </article>
@@ -224,8 +227,8 @@
         <li class="catalog__item">
           <article class="product-card">
             <a href="product.html" class="product-card__link"></a>
-            <img class="product-card__img" src="images/popular-categories/category-tulips-2.jpg" width="140" height="140"
-              alt="bouquet image">
+            <img class="product-card__img" src="images/popular-categories/category-tulips-2.jpg" width="140"
+              height="140" alt="bouquet image">
             <span class="product-card__price">$120</span>
             <button class="product-card__content-btn btn-animation" type="button">Add</button>
           </article>
@@ -243,7 +246,8 @@
           </a>
         </li>
         <li class="pagination__item">
-          <a class="pagination__link pagination__link--active pagination-animation" href="#" id="pagination-active">1</a>
+          <a class="pagination__link pagination__link--active pagination-animation" href="#"
+            id="pagination-active">1</a>
         </li>
         <li class="pagination__item">
           <a class="pagination__link pagination-animation" href="#">2</a>

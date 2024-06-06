@@ -1,6 +1,6 @@
 .popular-categories {
   text-align: center;
-  padding: 40px 0;
+  padding: 40px 0 60px 0;
   background-color: $accent-catalog-color;
 
   &__title {
@@ -45,6 +45,11 @@
     border-radius: $bord-r;
     box-shadow: 0 0 0 1px $box-shadow;
     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+
+    &--active {
+      background-color: $accent-color;
+      color: $btn-color;
+    }
 
     & svg {
       position: absolute;
@@ -92,15 +97,6 @@
     }
   }
 
-  .mixitup-control-active {
-    background-color: $accent-color;
-    color: $btn-color;
-  }
-
-  .mixitup-control-active svg {
-    fill: $btn-color;
-  }
-
   &__content {
     margin-bottom: 60px;
     display: grid;
@@ -132,6 +128,9 @@
   }
 
   &__more {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     color: $accent-title-color;
     border-bottom: 2px solid currentColor;
     display: inline-block;

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#fc784e">
+  <meta name="msapplication-TileColor" content="#fc784e">
+  <meta name="theme-color" content="#fc784e">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+<header class="header" id="header">
+  <div class="header__wrapper">
+    <div class="container">
+      <div class="header__inner">
+
+        <nav class="menu">
+          <a class="logo menu__logo" href="index.html">
+            <img class="logo__img logo__img--menu" src="images/logo.svg" alt="логотип" width="200" height="30">
+          </a>
+          
+          <div class="page-navigation">
+            <ul class="page-navigation__list page-navigation__list--menu">
+              <li class="page-navigation__item">
+                <a class="page-navigation__link link-animation "
+                  href="index.html" id="home">Main</a>
+              </li>
+              <li class="page-navigation__item">
+                <a class="page-navigation__link link-animation page-navigation__link--active"
+                  href="catalog.html" id="catalog">Gallery</a>
+              </li>
+              <li class="page-navigation__item">
+                <a class="page-navigation__link link-animation "
+                  href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="user-nav">
+            <li class="user-nav__item">
+              <button class="user-nav__btn" type="button">
+                <svg class="user-nav__svg">
+                  <use xlink:href="images/sprite.svg#search"></use>
+                </svg>
+                <span class="sr-only">button open search</span>
+              </button>
+            </li>
+            <li class="user-nav__item">
+              <a class="user-nav__btn" href="cart.html">
+                <svg class="user-nav__svg">
+                  <use xlink:href="images/sprite.svg#icon-cart"></use>
+                </svg>
+                <span class="sr-only">open cart button</span>
+                <span class="user-nav__numb">0</span>
+              </a>
+            </li>
+          </ul>
+
+          <button class="burger" type="button">
+            <span class="burger__line"></span>
+            <span class="sr-only">Open menu</span>
+          </button>
+
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+  
+
+<div class="menu-mob">
+  <div class="menu-mob__content">
+    <a class="logo menu-mob__logo" href="#">
+      <img class="logo__img" src="images/logo.svg" alt="логотип">
+    </a>
+
+    <div class="page-navigation menu-mob__page-navigation">
+      <ul class="page-navigation__list page-navigation__list--menu">
+        <li class="page-navigation__item">
+          <a class="page-navigation__link link-animation" href="index.html">Main</a>
+        </li>
+        <li class="page-navigation__item">
+          <a class="page-navigation__link link-animation" href="catalog.html">Gallery</a>
+        </li>
+        <li class="page-navigation__item">
+          <a class="page-navigation__link link-animation" href="#contacts">Contacts</a>
+        </li>
+      </ul>
+    </div>
+
+    <address class="contacts menu-mob__contacts">
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--adress link-animation" href="#">
+            <svg class="contacts__svg">
+              <use xlink:href="images/sprite.svg#icon-location"></use>
+            </svg>
+            2875 St.Clair Ave Est</a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--tel link-animation" href="tel:4165039081">
+            <svg class="contacts__svg">
+              <use xlink:href="images/sprite.svg#icon-call"></use>
+            </svg>
+            416-503-9081</a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--mail link-animation" href="mailto:support@julysflowers.com">
+            <svg class="contacts__svg">
+              <use xlink:href="images/sprite.svg#icon-message"></use>
+            </svg>
+            support@julysflowers.com</a>
+        </li>
+      </ul>
+
+      <ul class="social-contacts menu-mob__social-contacts">
+        <li class="social-contacts__item">
+          <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-facebook"></use>
+            </svg>
+            <span class="sr-only">link to facebook</span>
+          </a>
+        </li>
+        <li class="socia-contacts__item">
+          <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-twitter"></use>
+            </svg>
+            <span class="sr-only">twitter link</span>
+          </a>
+        </li>
+        <li class="social-contacts__item">
+          <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-instagram"></use>
+            </svg>
+            <span class="sr-only">link to instagram</span>
+          </a>
+        </li>
+      </ul>
+    </address>
+
+    <button class="menu-mob__close" type="button">
+      <span class="sr-only">Close menu</span>
+    </button>
+  </div>
+</div>
+
+<main class="main">
+
+  <section class="section cart-info">
+  <div class="container">
+    <h1 class="title cart-info__title">cart</h1>
+    <ul class="cart-info__items" id="cart">
+    </ul>
+    <div class="cart-info__bottom">
+      <button class="cart-info__buy btn-animation">buy</button>
+      <span class="cart-info__total-price">Total price: 0$</span>
+    </div>
+
+
+  </div>
+</section>
+  
+  <section class="discount section">
+  <div class="container">
+    <h2 class="title">Offers</h2>
+    <ul class="discount__wrap">
+      <li class="discount__item">
+        <article class="restaurant-card">
+          <img src="images/offers/offers-1.jpg" width="370" height="300"
+            alt="фото пиццы из этого ресторана" class="restaurant-card__img">
+          <h3 class="restaurant-card__text-discount">
+            Spring sale 30% for all items
+          </h3>
+        </article>
+      </li>
+
+      <li class="discount__item">
+        <article class="restaurant-card">
+          <img src="images/offers/offers-2.jpg" width="370" height="300" alt="фото пиццы из этого ресторана"
+            class="restaurant-card__img">
+          <h3 class="restaurant-card__text-discount">
+            Free delivery for orders over $200
+          </h3>
+        </article>
+      </li>
+
+      <li class="discount__item">
+        <article class="restaurant-card">
+          <img src="images/offers/offers-3.jpg" width="370" height="300"
+            alt="фото пиццы из этого ресторана" class="restaurant-card__img">
+          <h3 class="restaurant-card__text-discount">
+            Buy 3 bouquets and get a discount $30 for next order.
+          </h3>
+        </article>
+      </li>
+
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+
+      <div class="form-subscribe">
+        <a class="logo footer__logo" href="#header">
+          <img class="logo__img" src="images/logo.svg" alt="логотип">
+        </a>
+
+        <form class="form-subscribe__form">
+          <label class="sr-only" for="email">Yor email</label>
+          <input class="form-subscribe__input" type="email" placeholder="Ваш email" name="email" id="email">
+          <button class="form-subscribe__btn btn-animation" type="submit">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-telegram"></use>
+            </svg>
+            Subscribe</button>
+        </form>
+      </div>
+
+      <address class="contacts footer__contacts" id="contacts">
+        <ul class="contacts__list">
+          <li class="contacts__item ">
+            <a class="contacts__link contacts__link--adress link-animation" href="#">
+              <svg class="contacts__svg">
+                <use xlink:href="images/sprite.svg#icon-location"></use>
+              </svg>
+              2875 St.Clair Ave Est</a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--tel link-animation" href="tel:4165039081">
+              <svg class="contacts__svg">
+                <use xlink:href="images/sprite.svg#icon-call"></use>
+              </svg>
+              416-503-9081</a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--mail link-animation" href="mailto:support@julysflowers.com">
+              <svg class="contacts__svg">
+                <use xlink:href="images/sprite.svg#icon-message"></use>
+              </svg>
+              support@julysflowers.com</a>
+          </li>
+        </ul>
+
+        <ul class="social-contacts">
+          <li class="social-contacts__item">
+            <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-facebook"></use>
+              </svg>
+              <span class="sr-only">link to facebook</span>
+            </a>
+          </li>
+          <li class="social-contacts__item">
+            <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-twitter"></use>
+              </svg>
+              <span class="sr-only">twitter link</span>
+            </a>
+          </li>
+          <li class="social-contacts__item">
+            <a class="social-contacts__link" href="#" target="_blank" rel="noreferrer noopener">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-instagram"></use>
+              </svg>
+              <span class="sr-only">link to instagram</span>
+            </a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <span class="footer__bottom-text">
+      © 2022 July’s Flowers
+    </span>
+  </div>
+
+</footer>
+
+<script src="js/main.min.js"></script>
+</body>
+
+</html>
